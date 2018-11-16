@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Глейси</title>
+</head>
+<body>
+  <header class="main-header">
+    <a class="main-header-logo">
+      <img src="#" alt="Логотип магазина по продаже мороженого Глейси">
+    </a>
+    <nav class="main-navigation">
+      <ul class="site-navigation">
+        <li>
+          <a href="#">Каталог</a>
+          <!-- Здесь будет разметка для выпадающего меню в виде списка -->
+        </li>
+        <li><a href="#">Доставка и оплата</a></li>
+        <li><a href="#">О Компании</a></li>
+      </ul>
+    </nav>
+    <button class="search" type="button"></button>
+    <!-- форма поиска
+    исходное состояние думаю оформить в виде кнопки, при наведении на которую будет появляться форма -->
+    <a href="#" class="login-link">Вход
+      <!-- Здесь будет форма входа (по идее её можно вставить в ссылку т.к. тег "form" относится к flow content, а ссылка имеет прозрачную модель (header относится к flow content)-->
+    </a>
+    <a href="#" class="cart">Пусто</a>
+  </header>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
+  <main class="container">
+    <h1 class="visually-hidden">Магазин по продаже мороженого собственного производства Глейси</h1>
+    <!-- section с слайдером -->
+    <!-- section с баннерами-->
+    <!-- section с продуктами -->
 
-  </body>
+    <section class="about-shop">
+      <h2 class="title">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
+      <ul class="about-list">
+        <li class="about-item">
+          <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</p>
+        </li>
+        <li class="about-item">
+          <p>Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</p>
+        </li>
+        <li class="about-item">
+          <p>Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </p>
+        </li>
+        <li class="about-item">
+          <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</p>
+        </li>
+      </ul>
+    </section>
+
+    <article class="news-post">
+      <h2>Новое в нашем блоге</h2>
+      <a href="#">10 способов сервировки фруктовых щербетов к столу</a>
+    </article>
+
+    <section class="mailing">
+      <h2 class="visually-hidden">Форма отправки email для подписки на рассылку</h2>
+      <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+      <!-- здесь будет форма отправки email -->
+    </section>
+
+    <!-- Здесь будет карта -->
+  </main>
+
+  <footer class="main-footer">
+    <ul class="social-list">
+      <li class="social-item"><a href="#"><span class="visually-hidden">Твиттер</span></a></li>
+      <li class="social-item"><a href="#"><span class="visually-hidden">Инстаграм</span></a></li>
+      <li class="social-item"><a href="#"><span class="visually-hidden">Фейсбук</span></a></li>
+      <li class="social-item"><a href="#"><span class="visually-hidden">Вконтакте</span></a></li>
+    </ul>
+    <ul class="menu-list">
+      <li><a href="#">Для поставщиков</a></li>
+      <li><a href="#">Наши документы</a></li>
+      <li><a href="#">О производстве</a></li>
+      <li><a href="#">Экологические стандарты</a></li>
+    </ul>
+    <div class="copyright">
+      <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo"><img src="#" alt="Логотип Html Academy"></a>
+      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
+    </div>
+  </footer>
+
+  <section class="modal modal-feedback">
+    <h2>Мы обязательно вам ответим!</h2>
+    <!-- Здесь будет форма -->
+    <span class="modal-close">x</span>
+  </section>
+
+</body>
 </html>
