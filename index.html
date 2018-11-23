@@ -27,8 +27,8 @@
     </nav>
     <a class="search" href="#"><span class="visually-hidden">Поиск</span>
       <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
-        <input id="search-field" type="search" name="search"  placeholder="Что ищем?">
         <label class="visually-hidden" for="search-field">Поиск</label>
+        <input id="search-field" type="search" name="search"  placeholder="Что ищем?">
       </form>
     </a>
     <!-- Нужен ли вообще здесь лейбл или в качестве лейбла для скринридера здесь подойдет скрытый текст в "a"? До сих пор сомневаюсь, что в тег "a" вставлять форму можно, а просто инпут - нет, нормальный ли это ход, можно ли как-то еще разметить подобные случаи? -->
@@ -42,7 +42,7 @@
           <label class="visually-hidden" for="user-password">Пароль</label>
           <input class="password-field" id="user-password" type="password" name="password" placeholder="Пароль">
         </p>
-        <button class="btn" type="submit">Войти</button>
+        <button class="btn entry-btn" type="submit">Войти</button>
         <a class="restore" href="#">Забыли пароль?</a>
         <a class="registration" href="#">Новая регистрация</a>
       </form>
@@ -97,25 +97,25 @@
           <img src="img/img-icecream-creamy-orange-citrus.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
           <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
           <p class="price">310₽<span>/кг</span></p>
-          <!-- ссылка при наведении -->
+          <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="hits-item">
           <img src="img/img-icecream-creamy-coffee-chocolate.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
           <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
           <p class="price">380₽<span>/кг</span></p>
-          <!-- ссылка при наведении -->
+          <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="hits-item">
           <img src="img/img-icecream-creamy-strawberry-white-chocolate.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
           <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
           <p class="price">355₽<span>/кг</span></p>
-          <!-- ссылка при наведении -->
+          <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="hits-item">
           <img src="img/img-icecream-creamy-caramel.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
           <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
           <p class="price">415₽<span>/кг</span></p>
-          <!-- ссылка при наведении -->
+          <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
       </ul>
     </section>
