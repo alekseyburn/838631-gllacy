@@ -13,17 +13,39 @@
       <ul class="site-navigation">
         <li>
           <a href="#">Каталог</a>
-          <!-- Здесь будет разметка для выпадающего меню в виде списка -->
+          <ul class="catalog-menu">
+            <li><a href="#"><b>Новинки</b></a></li>
+            <li><a href="#">Сливочное</a></li>
+            <li><a href="#">Щербеты</a></li>
+            <li><a href="#">Фруктовый лед</a></li>
+            <li><a href="#">Мелорин</a></li>
+          </ul>
         </li>
         <li><a href="#">Доставка и оплата</a></li>
         <li><a href="#">О Компании</a></li>
       </ul>
     </nav>
     <a class="search" href="#"><span class="visually-hidden">Поиск</span>
-      <!-- форма поиска -->
+      <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+        <input id="search-field" type="search" name="search"  placeholder="Что ищем?">
+        <label class="visually-hidden" for="search-field">Поиск</label>
+      </form>
     </a>
+    <!-- Нужен ли вообще здесь лейбл или в качестве лейбла для скринридера здесь подойдет скрытый текст в "a"? До сих пор сомневаюсь, что в тег "a" вставлять форму можно, а просто инпут - нет, нормальный ли это ход, можно ли как-то еще разметить подобные случаи? -->
     <a class="login-link" href="#">Вход
-      <!-- форма входа -->
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-email">Электронная почта</label>
+          <input class="email-field" id="user-email" type="email" name="email" placeholder="Электронная почта">
+        </p>
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="password-field" id="user-password" type="password" name="password" placeholder="Пароль">
+        </p>
+        <button class="btn" type="submit">Войти</button>
+        <a class="restore" href="#">Забыли пароль?</a>
+        <a class="registration" href="#">Новая регистрация</a>
+      </form>
     </a>
     <a class="cart" href="#">Пусто</a>
     <p class="contact-info">С 10 до 20, ежедневно
@@ -37,18 +59,18 @@
     <section class="offers-slider">
       <!-- радио-кнопки -->
       <ul class="offers-list">
-      <li class="offers-item">
-        <h2>Крем-брюле и пломбир с малиновым джемом</h2>
-        <a class="btn offers-btn" href="#">Давайте оба!</a>
-      </li>
-      <li class="offers-item">
-        <h2>Шоколадный пломбир и лимонный сорбет</h2>
-        <a class="btn offers-btn" href="#">Давайте оба!</a>
-      </li>
-      <li class="offers-item">
-        <h2>Пломбир с помадкой и клубничный щербет</h2>
-        <a class="btn offers-btn" href="#">Давайте оба!</a>
-      </li>
+        <li class="offers-item">
+          <h2>Крем-брюле и пломбир с малиновым джемом</h2>
+          <a class="btn offers-btn" href="#">Давайте оба!</a>
+        </li>
+        <li class="offers-item">
+          <h2>Шоколадный пломбир и лимонный сорбет</h2>
+          <a class="btn offers-btn" href="#">Давайте оба!</a>
+        </li>
+        <li class="offers-item">
+          <h2>Пломбир с помадкой и клубничный щербет</h2>
+          <a class="btn offers-btn" href="#">Давайте оба!</a>
+        </li>
       </ul>
     </section>
 
@@ -124,7 +146,12 @@
     <section class="mailing">
       <h2 class="visually-hidden">Подписка на рассылку</h2>
       <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <!-- здесь будет форма отправки email -->
+      <form class="subscribe-form" action="https://echo.htmlacademy" method="post">
+        <label class="visually-hidden" for="subscribe-field"></label>
+        <input id="subscribe-field" type="email" name="subscribe-email" placeholder="Электронная почта">
+        <button class="btn" type="submit">Отправить</button>
+      </form>
+      <!-- Тот же вопрос - нужен ли лейбл в данном случае? -->
     </section>
 
     <section class="find-us">
@@ -139,7 +166,6 @@
         <p>(с 10 до 20 ежедневно)</p>
         <a class="btn feedback-btn" href="#">Форма обратной связи</a>
       </div>
-      <!-- комментарий по find-us.Не знаю правильно ли использовать здесь столько тегов для разметки feedback-contacts -->
     </section>
 
   </main>
@@ -165,8 +191,22 @@
 
   <section class="modal modal-feedback">
     <h2>Мы обязательно вам ответим!</h2>
-    <!-- Здесь будет форма -->
-    <span class="modal-close">x</span>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <p>
+        <label class="visually-hidden" for="feedback-name">Имя</label>
+        <input class="feedback-name-field" id="feedback-name" type="text" name="name-for-feedback" placeholder="Как вас зовут?">
+      </p>
+      <p>
+        <label class="visually-hidden" for="feedback-email">Почта для обратной связи</label>
+        <input class="feedback-email-field" id="feedback-email" type="email" name="email-for-feedback" placeholder="Ваша почта для ответа?">
+      </p>
+      <p>
+        <label class="visually-hidden" for="feedback-text">Текст письма</label>
+        <textarea class="feedback-text-field" id="feedback-text" name="text" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+      </p>
+      <button class="btn" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button">Закрыть</button>
   </section>
 
 </body>
