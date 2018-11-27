@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
@@ -13,7 +16,7 @@
       <ul class="site-navigation">
         <li>
           <a href="#">Каталог</a>
-          <ul class="catalog-menu">
+          <ul class="catalog-menu" hidden> <!-- скрыл -->
             <li><a href="#"><b>Новинки</b></a></li>
             <li><a href="#">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -26,12 +29,12 @@
       </ul>
     </nav>
     <a class="search" href="#"></a> <!-- Правильно ли оставлять здесь ссылку пустой? -->
-    <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+    <form class="search-form" action="https://echo.htmlacademy.ru" method="post" hidden> <!-- скрыл -->
       <label class="visually-hidden" for="search-field">Поиск</label>
       <input id="search-field" type="search" name="search"  placeholder="Что ищем?">
     </form>
     <a class="login-link" href="#">Вход</a>
-    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+    <form class="login-form" action="https://echo.htmlacademy.ru" method="post" hidden> <!-- Скрыл -->
       <p>
         <label class="visually-hidden" for="user-email">Электронная почта</label>
         <input class="email-field" id="user-email" type="email" name="email" placeholder="Электронная почта">
@@ -67,11 +70,11 @@
           <h2>Крем-брюле и пломбир с малиновым джемом</h2>
           <a class="btn offers-btn" href="#">Давайте оба!</a>
         </li>
-        <li class="offers-item">
+        <li class="offers-item" hidden> <!-- Скрыл -->
           <h2>Шоколадный пломбир и лимонный сорбет</h2>
           <a class="btn offers-btn" href="#">Давайте оба!</a>
         </li>
-        <li class="offers-item">
+        <li class="offers-item" hidden> <!-- Скрыл -->
           <h2>Пломбир с помадкой и клубничный щербет</h2>
           <a class="btn offers-btn" href="#">Давайте оба!</a>
         </li>
@@ -188,7 +191,7 @@
     </ul>
     <div class="copyright">
       <a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="38" alt="Логотип Html Academy"></a>
-      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
+      <p class="made-in">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
     </div>
   </footer>
 
@@ -211,6 +214,9 @@
     </form>
     <button class="modal-close" type="button">Закрыть</button>
   </section>
-
-</body>
-</html>
+  <script>document.write('<script src="http://'
+    + (location.host || 'localhost').split(':')[0]
+    + ':35729/livereload.js?snipver=1"></'
+    + 'script>')</script>
+  </body>
+  </html>

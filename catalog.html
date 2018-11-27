@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Глейси</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
   <header class="main-header">
@@ -13,7 +16,7 @@
       <ul class="site-navigation">
         <li class="site-navigation-current">
           <a href="#">Каталог</a>
-          <ul class="catalog-menu">
+          <ul class="catalog-menu" hidden>
             <li><a href="#"><b>Новинки</b></a></li>
             <li><a href="#">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -26,12 +29,12 @@
       </ul>
     </nav>
     <a class="search" href="#"></a>
-    <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
+    <form class="search-form" action="https://echo.htmlacademy.ru" method="post" hidden>
       <label class="visually-hidden" for="search-field">Поиск</label>
       <input id="search-field" type="search" name="search"  placeholder="Что ищем?">
     </form>
     <a class="login-link" href="#">Вход</a>
-    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+    <form class="login-form" action="https://echo.htmlacademy.ru" method="post" hidden>
       <p>
         <label class="visually-hidden" for="user-email">Электронная почта</label>
         <input class="email-field" id="user-email" type="email" name="email" placeholder="Электронная почта">
@@ -45,7 +48,7 @@
       <a class="registration" href="#">Новая регистрация</a>
     </form>
     <a class="cart not-empty" href="#">2 товара</a>
-    <div class="products-cart">
+    <div class="products-cart" hidden>
       <table class="products-cart-list">
         <tr class="products-cart-item">
           <td><a class="close-btn" href="#">Закрыть</a></td>
@@ -79,7 +82,7 @@
 
     <h1 class="page-title">Сливочное мороженое</h1>
 
-    <section class="filters">
+    <section class="filters" hidden>
       <h2 class="visually-hidden">Фильтр</h2>
       <form class="filter" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="sort">
@@ -160,73 +163,73 @@
       <ul class="catalog-list">
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-orange-citrus.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-          <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
+          <h3 class="item-title"><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
           <p class="price">310₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-coffee-chocolate.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
-          <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
+          <h3 class="item-title"><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
           <p class="price">380₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-strawberry-white-chocolate.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
-          <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
+          <h3 class="item-title"><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
           <p class="price">355₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-caramel.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
-          <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
+          <h3 class="item-title"><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
           <p class="price">415₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-cowberry.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
-          <h3><a href="#">Сливочное с брусничным джемом</a></h3>
+          <h3 class="item-title"><a href="#">Сливочное с брусничным джемом</a></h3>
           <p class="price">325₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-blueberries.jpg" width="267" height="267" alt="Сливочно-черничное с цельными ягодами черники">
-          <h3><a href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
+          <h3 class="item-title"><a href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
           <p class="price">410₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-lemon-caramel.jpg" width="267" height="267" alt="Сливочно-лимонное с карамельной присыпкой">
-          <h3><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
+          <h3 class="item-title"><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
           <p class="price">375₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-chocolate.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
-          <h3><a href="#">Сливочное с шоколадной стружкой</a></h3>
+          <h3 class="item-title"><a href="#">Сливочное с шоколадной стружкой</a></h3>
           <p class="price">320₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-vanilla-chocolate.jpg" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
-          <h3><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
+          <h3 class="item-title"><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
           <p class="price">440₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-menthol.jpg" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
-          <h3><a href="#">Сливочноe с ментоловым сиропом</a></h3>
+          <h3 class="item-title"><a href="#">Сливочноe с ментоловым сиропом</a></h3>
           <p class="price">435₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-black-chocolate.jpg" width="267" height="267" alt="Сливочное с кусочками черного шоколада">
-          <h3><a href="#">Сливочное с кусочками черного шоколада</a></h3>
+          <h3 class="item-title"><a href="#">Сливочное с кусочками черного шоколада</a></h3>
           <p class="price">355₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/img-icecream-creamy-mint.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
-          <h3><a href="#">Сливочное с мятным сиропом</a></h3>
+          <h3 class="item-title"><a href="#">Сливочное с мятным сиропом</a></h3>
           <p class="price">420₽<span>/кг</span></p>
           <a class="btn preview-btn" href="#">Быстрый просмотр</a>
         </li>
@@ -258,8 +261,12 @@
     </ul>
     <div class="copyright">
       <a class="academy-logo" href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="108" height="38" alt="Логотип Html Academy"></a>
-      <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
+      <p class="made-in">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
     </div>
   </footer>
+    <script>document.write('<script src="http://'
+    + (location.host || 'localhost').split(':')[0]
+    + ':35729/livereload.js?snipver=1"></'
+    + 'script>')</script>
 </body>
 </html>
