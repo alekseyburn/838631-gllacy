@@ -43,6 +43,7 @@ a {
   background-image: linear-gradient(to bottom, #ba5d4b, #b37d65);
   box-shadow: inset 0 2px 2px #942718;
 }
+
 .site-navigation {
   list-style: none;
   font-weight: 700;
@@ -198,14 +199,15 @@ a {
   list-style: none;
 }
 
-.social-list {
-  list-style: none;
+.catalog-item img {
+  border-radius: 50%;
 }
 
 .catalog-item h3 {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
+  text-align: center;
 }
 
 .item-title a {
@@ -245,6 +247,10 @@ a {
 
 .main-footer a {
   color: #ffffff;
+}
+
+.social-list {
+  list-style: none;
 }
 
 .menu-list {
