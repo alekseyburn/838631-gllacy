@@ -7,7 +7,7 @@ body {
   font-family: "Roboto", Arial, sans-serif;
   color: #ffffff;
 
-  background-color: #000000;
+  background-color: #849d8f;
 }
 
 a {
@@ -33,14 +33,16 @@ a {
 
 .btn:hover,
 .btn:focus {
-  background-color: #da8a72;
-  background-image: linear-gradient(to top, #c3705f, #cc8069);
+  background-color: #f26843;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+  linear-gradient(to top, #e74a35, #f26843);
   box-shadow: 0 2px 2px #ac1000;
 }
 
 .btn:active {
   background-color: #bc5e4b;
-  background-image: linear-gradient(to bottom, #ba5d4b, #b37d65);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+  linear-gradient(to bottom, #e74a35, #f26843);
   box-shadow: inset 0 2px 2px #942718;
 }
 
@@ -51,37 +53,44 @@ a {
 }
 
 .site-navigation a {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /*решил сделать бордером, а не андерлайном потому что у андерлайна не знаю как задать opacity(если это возможно вообще)*/
-}
-
-.site-navigation a,
-.login-link,
-.cart {
   color: #ffffff;
-}
 
-.site-navigation a:hover,
-.login-link:hover,
-.cart:hover,
-.site-navigation a:focus,
-.login-link:focus,
-.cart:focus {
-  color: #323232;
-
-  background-color: #ffffff;
-  border-bottom: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .site-navigation-current a {
   background-color: #ee725a;
   border-bottom: none;
+  border-radius: 16px;
 }
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+  color: #323232;
+
+  background-color: #ffffff;
+  border-bottom: none;
+  border-radius: 16px;
+}
+
 .login-link,
-.cart,
-.contact-info {
+.cart {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
+  color: #ffffff;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+}
+
+.login-link:hover,
+.login-link:focus,
+.cart:hover,
+.cart:focus {
+  color: #323232;
+
+  background-color: #ffffff;
 }
 
 .not-empty {
@@ -89,8 +98,11 @@ a {
 
   background-color: #ffffff;
 }
+
 .contact-info {
   font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .phone {
@@ -154,7 +166,8 @@ a {
   line-height: 24px;
   color: #000000;
 
-  border: 1px solid #b2b2b2;
+  border: 2px solid #b2b2b2;
+  border-radius: 5px;
 }
 
 .subscribe-form input:hover {
@@ -165,7 +178,6 @@ a {
   border: 2px solid #2e88e4;
   outline: none;
 }
-/* пока не соображаю каким образом сделать так, чтобы размер рамки не прыгал. Состояние "поле с введенными данными" - это состояние без фокуса?*/
 
 .page-title {
   font-weight: 700;
@@ -189,6 +201,8 @@ a {
 .breadcrumbs a:focus,
 .breadcrumbs a:active {
   color: #ffbc9e;
+
+  border-color: rgba(255, 188, 158, 0.3);
 }
 
 .breadcrums-current {
@@ -220,6 +234,8 @@ a {
 .item-title a:focus,
 .item-title a:active {
   color: #ffbc9e;
+
+  border-color: rgba(255, 188, 158, 0.3);
 }
 
 .preview-btn {
@@ -259,22 +275,13 @@ a {
   line-height: 18px;
 }
 
-.menu-list a,
-.made-in a {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
 .menu-list li:first-child {
   font-weight: 700;
 }
 
-.menu-list a:hover,
-.made-in a:hover,
-.menu-list a:focus,
-.made-in a:focus,
-.menu-list a:active,
-.made-in a:active {
-  color: #ffbc9e;
+.menu-list a,
+.made-in a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .made-in {
@@ -282,6 +289,13 @@ a {
   line-height: 18px;
 }
 
-/*Не смог вытащить нормальный цвет градиентов у кнопок из-за слоя в фш "color-overlay".
-Общий цвет страницы задал черным потому что, цвет будет переключаться через радиокнопки в слайдере, а в фш бекграунд черный.
-Скрипт в конце html страниц - для себя, автообновление страницы.*/
+.menu-list a:hover,
+.menu-list a:focus,
+.menu-list a:active,
+.made-in a:hover,
+.made-in a:focus,
+.made-in a:active {
+  color: #ffbc9e;
+
+  border-color: rgba(255, 188, 158, 0.3);
+}
