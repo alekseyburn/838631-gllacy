@@ -16,7 +16,7 @@
       <ul class="site-navigation">
         <li class="site-navigation-current">
           <a href="#">Каталог</a>
-          <ul class="catalog-menu" hidden>
+          <ul class="catalog-menu">
             <li><a href="#"><b>Новинки</b></a></li>
             <li><a href="#">Сливочное</a></li>
             <li><a href="#">Щербеты</a></li>
@@ -28,13 +28,15 @@
         <li><a href="#">О Компании</a></li>
       </ul>
     </nav>
-    <a class="search" href="#"></a>
-    <form class="search-form" action="https://echo.htmlacademy.ru" method="post" hidden>
-      <label class="visually-hidden" for="search-field">Поиск</label>
+        <div class="wrapper">
+    <a class="search" href="#"><span class="visually-hidden">Поиск</span></a>
+    <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
       <input id="search-field" type="search" name="search"  placeholder="Что ищем?">
     </form>
+    </div>
+    <div class="wrapper">
     <a class="login-link" href="#">Вход</a>
-    <form class="login-form" action="https://echo.htmlacademy.ru" method="post" hidden>
+    <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
       <p>
         <label class="visually-hidden" for="user-email">Электронная почта</label>
         <input class="email-field" id="user-email" type="email" name="email" placeholder="Электронная почта">
@@ -47,8 +49,9 @@
       <a class="restore" href="#">Забыли пароль?</a>
       <a class="registration" href="#">Новая регистрация</a>
     </form>
+    </div>
     <a class="cart not-empty" href="#">2 товара</a>
-    <div class="products-cart" hidden>
+    <div class="products-cart">
       <table class="products-cart-list">
         <tr class="products-cart-item">
           <td><a class="close-btn" href="#">Закрыть</a></td>
@@ -82,7 +85,7 @@
 
     <h1 class="page-title">Сливочное мороженое</h1>
 
-    <section class="filters" hidden>
+    <section class="filters">
       <h2 class="visually-hidden">Фильтр</h2>
       <form class="filter" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="sort">

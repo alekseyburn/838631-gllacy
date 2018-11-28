@@ -73,6 +73,90 @@ a {
   border-radius: 16px;
 }
 
+.site-navigation a:active {
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0 2px 1px #696969;
+}
+
+.site-navigation li:first-child:hover .catalog-menu {
+  display: block;
+}
+
+.catalog-menu {
+  display: none;
+
+  list-style: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+
+  background-color: #f7f6f3;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.catalog-menu li:first-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+/*пока не представляю как эту черту сделать шире текста, может она не бордером здесь делается, а элементом after?*/
+
+.catalog-menu a {
+  color: #323232;
+
+  border-bottom: none;
+}
+
+.catalog-menu a:hover,
+.catalog-menu a:focus {
+  background-color: #fbded7;
+  border-radius: 0;
+}
+
+.catalog-menu a:active {
+  background-color: #f6b5a5;
+}
+
+.catalog-menu-current a {
+  color: #ffffff;
+
+  background-color: #d07058;
+}
+/*этого состояния на страницах нет*/
+
+.main-header .wrapper:hover .search-form {
+  display: block;
+}
+/*пришлось делать обертку, чтобы не исчезал поиск после потери фокуса у слова "Поиск"*/
+/*решил всё-таки сделать текст у самой ссылки, а лейбл удалить. Если этот подход не нормальный, то просьба сообщить)*/
+
+.search-form {
+  display: none;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.search-form input {
+  font: inherit;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+
+  border: 2px solid #b2b2b2;
+  border-radius: 5px;
+}
+
+.search-form input:hover {
+  border: 2px solid #9a9a9a;
+}
+
+.search-form input:focus {
+  border: 2px solid #2e88e4;
+  outline: none;
+}
+
 .login-link,
 .cart {
   font-weight: 500;
@@ -93,6 +177,60 @@ a {
   background-color: #ffffff;
 }
 
+.login-link:active,
+.cart:active {
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0 2px 1px #696969;
+}
+
+.main-header .wrapper:hover .login-form {
+  display: block;
+}
+/*Тоже пришлось сделать обертку*/
+
+.login-form {
+  display: none;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.login-form input {
+  font: inherit;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+
+  border: 2px solid #b2b2b2;
+  border-radius: 5px;
+}
+
+.login-form input:hover {
+  border: 2px solid #9a9a9a;
+}
+
+.login-form input:focus {
+  border: 2px solid #2e88e4;
+  outline: none;
+}
+
+.login-form a {
+  font-size: 13px;
+  line-height: 24px;
+  color: #323232;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.login-form a:hover,
+.login-form a:focus,
+.login-form a:active {
+  color: #e84d37;
+
+  border-bottom-color: rgba(232, 77, 55, 0.3);
+}
+
 .not-empty {
   color: #323232;
 
@@ -109,6 +247,75 @@ a {
   font-size: 22px;
   line-height: 24px;
   color: #ffffff;
+}
+
+.offers-list {
+  list-style: none;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60.35px;
+  text-align: center;
+}
+
+.offers-btn {
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.offers-list li:first-child {
+  display: none;
+
+  background-image: url(../img/bg-slider-creamy-raspberry.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.offers-list li:nth-child(2) {
+  display: none;
+
+  background-image: url(../img/bg-slider-chocolate-lemon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.offers-list li:last-child {
+  display: none;
+
+  background-image: url(../img/bg-slider-fondant-strawberry.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.btn-1:checked ~ .offers-list li:first-child,
+.btn-2:checked ~ .offers-list li:nth-child(2),
+.btn-3:checked ~ .offers-list li:last-child {
+  display: block;
+}
+/*не получилось поменять цвет фона у body с помощью этой конструкции, я так понял она работает только внутри данного section*/
+
+.banners-list {
+  list-style: none;
+}
+
+.banners-list li:first-child {
+  background-image: url(../img/bg-raspberry.jpg);
+  background-repeat: no-repeat;
+}
+
+.banners-list li:last-child {
+  background-image: url(../img/bg-chocolate.jpg);
+  background-repeat: no-repeat;
+}
+.banners-item h3 {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+.banners-item p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 .about-shop {
@@ -179,6 +386,29 @@ a {
   outline: none;
 }
 
+.feedback-contacts {
+  background-color: #ffffff;
+  border-radius: 5px;
+}
+
+.feedback-contacts p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #323232;
+}
+
+.feedback-contacts b {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.feedback-contacts .phone {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #323232;
+}
+
 .page-title {
   font-weight: 700;
   font-size: 35px;
@@ -209,15 +439,18 @@ a {
   color: #ffffff;
 }
 
-.catalog-list {
+.catalog-list,
+.hits-list {
   list-style: none;
 }
 
-.catalog-item img {
+.catalog-item img,
+.hits-item img {
   border-radius: 50%;
 }
 
-.catalog-item h3 {
+.catalog-item h3,
+.hits-item h3 {
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -242,12 +475,14 @@ a {
   display: none;
 }
 
-.catalog-item:hover {
+.catalog-item:hover,
+.hits-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
-.catalog-item:hover .preview-btn {
+.catalog-item:hover .preview-btn,
+.hits-item:hover .preview-btn {
   display: block;
 }
 
