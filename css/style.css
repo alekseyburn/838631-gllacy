@@ -58,7 +58,7 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.site-navigation-current a {
+.site-navigation-current > a {
   background-color: #ee725a;
   border-bottom: none;
   border-radius: 16px;
@@ -127,7 +127,7 @@ a {
   display: block;
 }
 /*пришлось делать обертку, чтобы не исчезал поиск после потери фокуса у слова "Поиск"*/
-/*решил всё-таки сделать текст у самой ссылки, а лейбл удалить. Если этот подход не нормальный, то просьба сообщить)*/
+/*решил всё-таки сделать текст у самой ссылки, а лейбл удалить (посмотрел несколько примеров использования input type=search в интернете, как я понял ему лейбл не обязателен.*/
 
 .search-form {
   display: none;
@@ -176,7 +176,7 @@ a {
 
   background-color: #ffffff;
 }
-
+/*не до конца понял по поводу распределения элементов - в прошлый раз ты говорила про site-navigation. Лучше везде разделить элементы и написать им свойства, даже если они одинаковы, или запись в таком формате как расположено выше тоже подходит?*/
 .login-link:active,
 .cart:active {
   background-color: rgba(248, 247, 244, 0.988);
@@ -237,6 +237,37 @@ a {
   background-color: #ffffff;
 }
 
+.products-cart {
+  display: none;
+
+  font-size: 13px;
+  line-height: 16px;
+  color: #323232;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+}
+
+.products-cart img {
+  border-radius: 50%;
+}
+
+.products-cart span {
+  color: #999999;
+}
+/*с разделителем здесь пока так же не разобрался*/
+.products-cart p {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: right;
+}
+
+.main-header .wrapper:hover .products-cart {
+  display: block;
+}
+
 .contact-info {
   font-weight: 700;
   font-size: 14px;
@@ -269,7 +300,7 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
 }
-
+/*пока не понимаю как осуществить чтобы бекграунд слайдов заползал на хедер и на блок ниже слайдов?*/
 .offers-list li:nth-child(2) {
   display: none;
 
@@ -291,7 +322,7 @@ a {
 .btn-3:checked ~ .offers-list li:last-child {
   display: block;
 }
-/*не получилось поменять цвет фона у body с помощью этой конструкции, я так понял она работает только внутри данного section*/
+/*не получилось поменять цвет фона у body с помощью этой конструкции, я так понял она работает только внутри данного section и делается через js?*/
 
 .banners-list {
   list-style: none;
@@ -317,7 +348,7 @@ a {
   font-size: 18px;
   line-height: 22px;
 }
-
+/*здесь должны были быть стили HITS, но так как они абсолютно идентичны, то я добавил их к свойствам каталога.*/
 .about-shop {
   color: #323232;
 
@@ -435,10 +466,69 @@ a {
   border-color: rgba(255, 188, 158, 0.3);
 }
 
-.breadcrums-current {
+.breadcrumbs-current {
   color: #ffffff;
 }
 
+.filters fieldset {
+  border: none;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+}
+
+.filters legend {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.sort-list,
+.range-controls,
+.fat-percent ul,
+.fillers ul {
+background-color: rgba(255, 255, 255, 0.2);
+border-radius: 31px;
+}
+
+.price-controls input {
+  font: inherit;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+}
+
+.fat-percent ul {
+  list-style: none;
+}
+
+.fillers ul {
+  list-style: none;
+}
+
+.filter-btn {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+border: 2px solid #ffffff;
+background-color: transparent;
+border-radius: 31px;
+color: #ffffff;
+text-align: center;
+vertical-align: middle;
+}
+
+.filter-btn:hover,
+.filter-btn:focus {
+  background-color: #ffffff;
+  color: #323232;
+}
+
+.filter-btn:active {
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.4);
+}
+/*сортировку пока стилизовать не смог, нужно будет почитать про нее*/
 .catalog-list,
 .hits-list {
   list-style: none;
@@ -494,6 +584,41 @@ a {
 
 .price span {
   font-size: 30px;
+}
+
+.pagination-list {
+  list-style: none;
+}
+
+.pagination-item a {
+  line-height: 18px;
+  color: #ffffff;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.pagination-item a:active {
+  color: #323232;
+
+  background-color: #ffffff;
+}
+
+.pagination-item-current a {
+  color: #323232;
+
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.pagination-item-current a:hover,
+.pagination-item-current a:focus {
+  color: #323232;
+
+  background-color: #ffffff;
 }
 
 .main-footer a {
