@@ -15,7 +15,6 @@ a {
 }
 
 .btn {
-  font: inherit;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -45,6 +44,8 @@ a {
   linear-gradient(to bottom, #e74a35, #f26843);
   box-shadow: inset 0 2px 2px #942718;
 }
+
+/*Header*/
 
 .site-navigation {
   list-style: none;
@@ -114,6 +115,7 @@ a {
 
 .catalog-menu a:active {
   background-color: #f6b5a5;
+  box-shadow: none;
 }
 
 .catalog-menu-current a {
@@ -133,7 +135,6 @@ a {
   display: none;
 
   background-color: #f8f7f4;
-  border-radius: 5px;
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
@@ -157,6 +158,7 @@ a {
   outline: none;
 }
 
+.search,
 .login-link,
 .cart {
   font-weight: 500;
@@ -168,6 +170,8 @@ a {
   border-radius: 16px;
 }
 
+.search:hover,
+.search:focus,
 .login-link:hover,
 .login-link:focus,
 .cart:hover,
@@ -175,12 +179,6 @@ a {
   color: #323232;
 
   background-color: #ffffff;
-}
-/*не до конца понял по поводу распределения элементов - в прошлый раз ты говорила про site-navigation. Лучше везде разделить элементы и написать им свойства, даже если они одинаковы, или запись в таком формате как расположено выше тоже подходит?*/
-.login-link:active,
-.cart:active {
-  background-color: rgba(248, 247, 244, 0.988);
-  box-shadow: inset 0 2px 1px #696969;
 }
 
 .main-header .wrapper:hover .login-form {
@@ -224,8 +222,7 @@ a {
 }
 
 .login-form a:hover,
-.login-form a:focus,
-.login-form a:active {
+.login-form a:focus {
   color: #e84d37;
 
   border-bottom-color: rgba(232, 77, 55, 0.3);
@@ -280,8 +277,14 @@ a {
   color: #ffffff;
 }
 
+/*end of Header*/
+/*Slides*/
+
 .offers-list {
   list-style: none;
+}
+
+.offers-item h2 {
   font-weight: 700;
   font-size: 60px;
   line-height: 60.35px;
@@ -296,6 +299,7 @@ a {
 .offers-list li:first-child {
   display: none;
 
+  background-color: #849d8f;
   background-image: url(../img/bg-slider-creamy-raspberry.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -304,6 +308,7 @@ a {
 .offers-list li:nth-child(2) {
   display: none;
 
+  background-color: #8996a6;
   background-image: url(../img/bg-slider-chocolate-lemon.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -312,6 +317,7 @@ a {
 .offers-list li:last-child {
   display: none;
 
+  background-color: #9d8b84;
   background-image: url(../img/bg-slider-fondant-strawberry.png);
   background-repeat: no-repeat;
   background-position: center center;
@@ -324,8 +330,15 @@ a {
 }
 /*не получилось поменять цвет фона у body с помощью этой конструкции, я так понял она работает только внутри данного section и делается через js?*/
 
+/*end of Slides*/
+/*Banners*/
+
 .banners-list {
   list-style: none;
+}
+
+.banners-item {
+  border-radius: 15px;
 }
 
 .banners-list li:first-child {
@@ -337,6 +350,7 @@ a {
   background-image: url(../img/bg-chocolate.jpg);
   background-repeat: no-repeat;
 }
+
 .banners-item h3 {
   font-weight: 700;
   font-size: 35px;
@@ -348,7 +362,13 @@ a {
   font-size: 18px;
   line-height: 22px;
 }
+
+/*end of Banners*/
+
 /*здесь должны были быть стили HITS, но так как они абсолютно идентичны, то я добавил их к свойствам каталога.*/
+
+/*about-shop*/
+
 .about-shop {
   color: #323232;
 
@@ -356,6 +376,7 @@ a {
   background-image: url(../img/bg-waffle.jpg);
   background-repeat: repeat;
   background-position: 0 0;
+  border-radius: 15px;
 }
 
 .about-shop h2 {
@@ -368,12 +389,16 @@ a {
   list-style: none;
 }
 
+/*end of about-item*/
+/*news-post*/
+
 .news-post {
   color: #323232;
 
   background-color: #ffffff;
   background-image: url(../img/bg-strawberry.jpg);
   background-repeat: no-repeat;
+  border-radius: 15px;
 }
 
 .news-post h2 {
@@ -393,11 +418,17 @@ a {
   color: #e84d37;
 }
 
+/*end of news-post*/
+/*mailing*/
+
 .mailing {
   color: #5a5a5a;
 
   background-color: #f8f7f4;
+  background-image: repeating-linear-gradient(135deg, #f8f7f4 0, #f8f7f4 8px, #92cdff 8px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 24px, #fe9e90 24px, #fe9e90 32px);
+  border-radius: 15px;
 }
+/*для фона сверху потом сделаю еще один див*/
 
 .subscribe-form input {
   font: inherit;
@@ -417,9 +448,12 @@ a {
   outline: none;
 }
 
+/*end of mailing*/
+/*find-us*/
+
 .feedback-contacts {
-  background-color: #ffffff;
-  border-radius: 5px;
+  background-color: #fdfefe;
+  border-radius: 15px;
 }
 
 .feedback-contacts p {
@@ -440,11 +474,16 @@ a {
   color: #323232;
 }
 
+/*end of find-us*/
+/*catalog.html*/
+
 .page-title {
   font-weight: 700;
   font-size: 35px;
   line-height: 41px;
 }
+
+/*breadcrumbs*/
 
 .breadcrumbs {
   list-style: none;
@@ -459,8 +498,7 @@ a {
 }
 
 .breadcrumbs a:hover,
-.breadcrumbs a:focus,
-.breadcrumbs a:active {
+.breadcrumbs a:focus {
   color: #ffbc9e;
 
   border-color: rgba(255, 188, 158, 0.3);
@@ -470,11 +508,15 @@ a {
   color: #ffffff;
 }
 
+/*end of breadcrumbs*/
+/*filters*/
+
 .filters fieldset {
-  border: none;
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
+
+  border: none;
 }
 
 .filters legend {
@@ -486,8 +528,29 @@ a {
 .range-controls,
 .fat-percent ul,
 .fillers ul {
-background-color: rgba(255, 255, 255, 0.2);
-border-radius: 31px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 18px;
+}
+
+.sort select {
+  font-weight: 500;
+  color: #ffffff;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 18px;
+}
+
+.sort select:hover,
+.sort select:focus {
+  color: #323232;
+}
+
+.sort option:hover,
+.sort option:focus {
+  color: #ffffff;
+
+  background-color: #1e90ff;
 }
 
 .price-controls input {
@@ -495,6 +558,7 @@ border-radius: 31px;
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
+
   background-color: transparent;
   border: none;
 }
@@ -508,30 +572,42 @@ border-radius: 31px;
 }
 
 .filter-btn {
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
-border: 2px solid #ffffff;
-background-color: transparent;
-border-radius: 31px;
-color: #ffffff;
-text-align: center;
-vertical-align: middle;
+  vertical-align: middle;
+  text-align: center;
+  color: #ffffff;
+
+  background-color: #9cb0a4;
+  border: 2px solid #ffffff;
+  border-radius: 18px;
 }
 
 .filter-btn:hover,
 .filter-btn:focus {
-  background-color: #ffffff;
   color: #323232;
+
+  background-color: #ffffff;
 }
 
 .filter-btn:active {
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.4);
+  background-color: #eaeaea;
+  border: none;
+  box-shadow: inset 0 2px 1px #696969;
 }
-/*сортировку пока стилизовать не смог, нужно будет почитать про нее*/
+
+/*end of filters*/
+/*catalog-list*/
+
 .catalog-list,
 .hits-list {
   list-style: none;
+}
+
+.catalog-item,
+.hits-item {
+  border-radius: 5px;
 }
 
 .catalog-item img,
@@ -586,6 +662,9 @@ vertical-align: middle;
   font-size: 30px;
 }
 
+/*end of catalog-list*/
+/*pagination*/
+
 .pagination-list {
   list-style: none;
 }
@@ -593,12 +672,13 @@ vertical-align: middle;
 .pagination-item a {
   line-height: 18px;
   color: #ffffff;
+
+  border-radius: 50%;
 }
 
 .pagination-item a:hover,
 .pagination-item a:focus {
   background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
 }
 
 .pagination-item a:active {
@@ -611,15 +691,11 @@ vertical-align: middle;
   color: #323232;
 
   background-color: #ffffff;
-  border-radius: 50%;
 }
+/*не могу сбросить стили для pagination-item-current при нажатии на другие pagination-item как в стайлгайде*/
 
-.pagination-item-current a:hover,
-.pagination-item-current a:focus {
-  color: #323232;
-
-  background-color: #ffffff;
-}
+/*end of pagination*/
+/*footer*/
 
 .main-footer a {
   color: #ffffff;
@@ -639,8 +715,7 @@ vertical-align: middle;
   font-weight: 700;
 }
 
-.menu-list a,
-.made-in a {
+.menu-list a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -649,13 +724,52 @@ vertical-align: middle;
   line-height: 18px;
 }
 
+.made-in a {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 .menu-list a:hover,
 .menu-list a:focus,
-.menu-list a:active,
 .made-in a:hover,
-.made-in a:focus,
-.made-in a:active {
+.made-in a:focus {
   color: #ffbc9e;
 
   border-color: rgba(255, 188, 158, 0.3);
 }
+
+/*end of footer*/
+/*modal*/
+
+.modal {
+  background-color: #f8f7f4;
+  border-radius: 10px;
+}
+
+.modal-feedback h2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #323232;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  font-size: 16px;
+  line-height: 24px;
+
+  border: 2px solid #b2b2b2;
+  border-radius: 5px;
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  border: 2px solid #9a9a9a;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  border: 2px solid #2e88e4;
+  outline: none;
+}
+
+/*end of modal*/
