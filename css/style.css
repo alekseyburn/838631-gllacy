@@ -45,9 +45,32 @@ a {
   box-shadow: inset 0 2px 2px #942718;
 }
 
+.container {
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
 /*Header*/
 
+.main-header {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.main-header-logo {
+  width: 154px;
+  height: 64px;
+  margin-right: 24px;
+  padding-top: 9px;
+}
+
 .site-navigation {
+  width: 382px;
+  margin: 0;
+  margin-right: 342px;
+  padding: 0;
+
   list-style: none;
   font-weight: 700;
   line-height: 18px;
@@ -125,6 +148,10 @@ a {
 }
 /*этого состояния на страницах нет*/
 
+.main-header .wrapper {
+  margin-right: 10px;
+}
+
 .main-header .wrapper:hover .search-form {
   display: block;
 }
@@ -156,6 +183,22 @@ a {
 .search-form input:focus {
   border: 2px solid #2e88e4;
   outline: none;
+}
+
+.search {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
+.login-link {
+  display: block;
+  width: 92px;
+}
+
+.cart {
+  display: block;
+  width: 100px;
 }
 
 .search,
@@ -266,6 +309,8 @@ a {
 }
 
 .contact-info {
+  margin: 0;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -370,6 +415,8 @@ a {
 /*about-shop*/
 
 .about-shop {
+  margin-bottom: 40px;
+
   color: #323232;
 
   background-color: #e9dcc0;
@@ -380,19 +427,43 @@ a {
 }
 
 .about-shop h2 {
+  margin: 0;
+
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
 }
 
 .about-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
+.about-item {
+  width: 540px;
+}
+
+.about-item p {
+  margin: 0;
+}
+
 /*end of about-item*/
+
+.index-columns {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
 /*news-post*/
 
 .news-post {
+  width: 560px;
+
   color: #323232;
 
   background-color: #ffffff;
@@ -402,6 +473,8 @@ a {
 }
 
 .news-post h2 {
+  margin: 0;
+
   font-size: 16px;
 }
 
@@ -422,6 +495,8 @@ a {
 /*mailing*/
 
 .mailing {
+  width: 560px;
+
   color: #5a5a5a;
 
   background-color: #f8f7f4;
@@ -429,6 +504,10 @@ a {
   border-radius: 15px;
 }
 /*для фона сверху потом сделаю еще один див*/
+
+.mailing p {
+  margin: 0;
+}
 
 .subscribe-form input {
   font: inherit;
@@ -477,7 +556,13 @@ a {
 /*end of find-us*/
 /*catalog.html*/
 
+.inner-page .main-header {
+  margin-bottom: 28px;
+}
+
 .page-title {
+  margin: 0;
+
   font-weight: 700;
   font-size: 35px;
   line-height: 41px;
@@ -486,6 +571,10 @@ a {
 /*breadcrumbs*/
 
 .breadcrumbs {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+
   list-style: none;
   font-size: 14px;
   line-height: 16px;
@@ -602,21 +691,41 @@ a {
 
 .catalog-list,
 .hits-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .catalog-item,
 .hits-item {
+  width: 267px;
+  margin-right: 26px;
+  margin-bottom: 40px;
+
   border-radius: 5px;
+}
+
+.catalog-item:nth-child(4n),
+.hits-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .catalog-item img,
 .hits-item img {
+  width: 267px;
+  height: 267px;
+  margin-top: 6px;
+
   border-radius: 50%;
 }
 
 .catalog-item h3,
 .hits-item h3 {
+  margin: 0;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -653,6 +762,8 @@ a {
 }
 
 .price {
+  margin: 0;
+
   font-weight: 700;
   font-size: 45px;
   line-height: 45px;
@@ -697,19 +808,36 @@ a {
 /*end of pagination*/
 /*footer*/
 
+.main-footer {
+  display: flex;
+  padding-top: 18px;
+  padding-bottom: 25px;
+}
+
 .main-footer a {
   color: #ffffff;
 }
 
 .social-list {
+  width: 186px;
+  margin: 0;
+  margin-right: 239px;
+  padding: 0;
+
   list-style: none;
 }
 
 .menu-list {
+  width: 305px;
+  margin: 0;
+  margin-right: 231px;
+  padding: 0;
+
   list-style: none;
   font-size: 13px;
   line-height: 18px;
 }
+/*пока задал ширину без учета "сердечка", не проверял будет ли оно видно после добавления его*/
 
 .menu-list li:first-child {
   font-weight: 700;
@@ -719,7 +847,18 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+.copyright {
+  width: 190px;
+}
+
+.academy-logo {
+  width: 108px;
+  height: 38px;
+}
+
 .made-in {
+  margin: 0;
+
   font-size: 12px;
   line-height: 18px;
 }
