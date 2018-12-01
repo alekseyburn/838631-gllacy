@@ -65,10 +65,13 @@ a {
   padding-top: 9px;
 }
 
+.main-navigation {
+  flex-grow: 1;
+  min-width: 382px;
+}
+/*Посмотрел и понял, что задал ширину не флекс-элементу, а элементу внутри флекс-элемента. Теперь навигация съедает все свободное пространство и не нужно задавать маргин*/
 .site-navigation {
-  width: 382px;
   margin: 0;
-  margin-right: 342px;
   padding: 0;
 
   list-style: none;
@@ -148,9 +151,10 @@ a {
 }
 /*этого состояния на страницах нет*/
 
-.main-header .wrapper {
+.main-header .wrapper:not(:last-of-type) {
   margin-right: 10px;
 }
+/*был лишний отступ у последнего элемента в обертке*/
 
 .main-header .wrapper:hover .search-form {
   display: block;
@@ -309,6 +313,8 @@ a {
 }
 
 .contact-info {
+  display: none;
+  /*пока что скрыл блок с временем работы*/
   margin: 0;
 
   font-weight: 700;
@@ -453,7 +459,7 @@ a {
 
 /*end of about-item*/
 
-.index-columns {
+.two-columns {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
@@ -529,6 +535,12 @@ a {
 
 /*end of mailing*/
 /*find-us*/
+
+.find-us.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
 
 .feedback-contacts {
   background-color: #fdfefe;
@@ -689,8 +701,7 @@ a {
 /*end of filters*/
 /*catalog-list*/
 
-.catalog-list,
-.hits-list {
+.catalog-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -699,8 +710,7 @@ a {
   list-style: none;
 }
 
-.catalog-item,
-.hits-item {
+.catalog-item {
   width: 267px;
   margin-right: 26px;
   margin-bottom: 40px;
@@ -708,13 +718,11 @@ a {
   border-radius: 5px;
 }
 
-.catalog-item:nth-child(4n),
-.hits-item:nth-child(4n) {
+.catalog-item:nth-child(4n) {
   margin-right: 0;
 }
 
-.catalog-item img,
-.hits-item img {
+.catalog-item img {
   width: 267px;
   height: 267px;
   margin-top: 6px;
@@ -722,8 +730,7 @@ a {
   border-radius: 50%;
 }
 
-.catalog-item h3,
-.hits-item h3 {
+.catalog-item h3 {
   margin: 0;
 
   font-weight: 500;
@@ -750,14 +757,12 @@ a {
   display: none;
 }
 
-.catalog-item:hover,
-.hits-item:hover {
+.catalog-item:hover {
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
-.catalog-item:hover .preview-btn,
-.hits-item:hover .preview-btn {
+.catalog-item:hover .preview-btn {
   display: block;
 }
 
