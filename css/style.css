@@ -332,10 +332,19 @@ a {
 /*Slides*/
 
 .offers-list {
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
+.offers-item {
+  min-height: 881px;
+}
+
 .offers-item h2 {
+  margin: 0;
+
   font-weight: 700;
   font-size: 60px;
   line-height: 60.35px;
@@ -355,7 +364,7 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
 }
-/*пока не понимаю как осуществить чтобы бекграунд слайдов заползал на хедер и на блок ниже слайдов?*/
+/*из идей с бекграундом только обернуть блоки шапки,слайдера и предложений в див и этому диву уже задать background image*/
 .offers-list li:nth-child(2) {
   display: none;
 
@@ -384,11 +393,22 @@ a {
 /*end of Slides*/
 /*Banners*/
 
+.banners {
+  margin-bottom: 40px;
+}
+
 .banners-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
 }
 
 .banners-item {
+  width: 560px;
+
   border-radius: 15px;
 }
 
@@ -403,12 +423,16 @@ a {
 }
 
 .banners-item h3 {
+  margin: 0;
+
   font-weight: 700;
   font-size: 35px;
   line-height: 41px;
 }
 
 .banners-item p {
+  margin: 0;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -417,7 +441,9 @@ a {
 /*end of Banners*/
 
 /*здесь должны были быть стили HITS, но так как они абсолютно идентичны, то я добавил их к свойствам каталога.*/
-
+.hits {
+  margin-bottom: 40px;
+}
 /*about-shop*/
 
 .about-shop {
@@ -612,7 +638,20 @@ a {
 /*end of breadcrumbs*/
 /*filters*/
 
+.filters {
+  width: 860px;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .filters fieldset {
+  margin: 0;
+  padding: 0;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -629,6 +668,9 @@ a {
 .range-controls,
 .fat-percent ul,
 .fillers ul {
+  margin: 0;
+  padding: 0;
+
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
 }
@@ -700,6 +742,12 @@ a {
 
 /*end of filters*/
 /*catalog-list*/
+
+.catalog {
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
 
 .catalog-list {
   display: flex;
@@ -890,10 +938,16 @@ a {
 }
 
 .modal-feedback h2 {
+  margin: 0;
+
   font-weight: 500;
   font-size: 24px;
   line-height: 28px;
   color: #323232;
+}
+
+.modal-feedback p {
+  margin: 0;
 }
 
 .feedback-form input,
