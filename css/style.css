@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
 
@@ -39,6 +49,9 @@ input[type="radio"].visually-hidden {
 }
 
 .btn {
+  min-width: 100px;
+  padding: 10px 24px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -50,7 +63,7 @@ input[type="radio"].visually-hidden {
   background-color: #ee725a;
   background-image: linear-gradient(to top, #e74a35, #f26843);
   border: none;
-  border-radius: 31px;
+  border-radius: 17px/22px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
@@ -70,7 +83,7 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-  width: 1146px;
+  width: 1200px;
   margin: 0 auto;
   padding: 0 27px;
 }
@@ -78,28 +91,32 @@ input[type="radio"].visually-hidden {
 /*Header*/
 
 .main-header {
+  position: relative;
+
   display: flex;
   align-items: center;
+  margin-top: 7px;
   margin-bottom: 10px;
 }
 
 .main-header-logo {
   width: 154px;
   height: 64px;
-  margin-right: 17px;
-  padding-top: 10px;
+  margin-right: 10px;
+  /*padding-top: 10px;*/
 }
 
 .main-navigation {
   flex-grow: 1;
-  width: 382px;
+  width: 380px;
 }
 
 /*Посмотрел и понял, что задал ширину не флекс-элементу, а элементу внутри флекс-элемента. Теперь навигация съедает все свободное пространство и не нужно задавать маргин*/
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
-  /*width: 382px;*/
+  justify-content: flex-start;
+  /*width: 350px;*/
   margin: 0;
   padding: 0;
 
@@ -108,13 +125,11 @@ input[type="radio"].visually-hidden {
   line-height: 18px;
 }
 
-.site-navigation > li {
+.site-navigation-item {
   position: relative;
-
-  padding: 23px 0;
 }
 
-.site-navigation > li > a {
+.site-navigation-item > a {
   display: block;
   margin: 0 14px;
   padding: 7px 0;
@@ -132,26 +147,34 @@ input[type="radio"].visually-hidden {
   border-radius: 16px;
 }
 
-.site-navigation > li > a:hover,
-.site-navigation > li > a:focus {
+.site-navigation-item > a:hover,
+.site-navigation-item > a:focus {
   margin: 0;
   padding: 7px 14px;
 
   color: #323232;
 
   background-color: #ffffff;
-  border-bottom: none;
   border-radius: 16px;
 }
 
-.site-navigation a:active {
+.site-navigation-item > a:active {
   background-color: rgba(248, 247, 244, 0.988);
   box-shadow: inset 0 2px 1px #696969;
 }
 
+.site-navigation-item::after {
+  content: "";
+  position: absolute;
+
+  display: block;
+  width: 200px;
+  height: 5px;
+}
+/*подложка для подменю. Так и не понял, как сделать ссылки каталога полноразмерными, а не маргинами по бокам.*/
 .catalog-menu {
   position: absolute;
-  top: 59px;
+  top: 37px;
   left: -7px;
 
   display: none;
@@ -173,20 +196,29 @@ input[type="radio"].visually-hidden {
   margin-bottom: 4px;
 }
 
-.site-navigation li:first-child:hover .catalog-menu {
+.site-navigation-item:first-child:hover .catalog-menu {
   display: block;
 }
 
 .catalog-menu li:first-child a {
   padding: 11px 20px;
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-/*пока не представляю как эту черту сделать шире текста, может она не бордером здесь делается, а элементом after?*/
+
+.catalog-menu li:first-child a::after {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 7px;
+
+  width: 128px;
+  height: 1px;
+
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
 .catalog-menu a {
   display: block;
-  padding: 6px 20px 6px;
+  padding: 6px 20px;
 
   color: #323232;
 
@@ -216,9 +248,23 @@ input[type="radio"].visually-hidden {
 /*этого состояния на страницах нет*/
 
 .main-header .wrapper {
-  margin-right: 10px;
-  padding: 5px 0;
   position: relative;
+
+  margin-right: 10px;
+}
+
+.main-header .wrapper:last-of-type {
+  margin-right: 0;
+}
+
+.main-header .wrapper::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+
+  width: 100px;
+  height: 22px;
 }
 
 .main-header .wrapper:hover .search-form {
@@ -228,45 +274,49 @@ input[type="radio"].visually-hidden {
 /*решил всё-таки сделать текст у самой ссылки, а лейбл удалить (посмотрел несколько примеров использования input type=search в интернете, как я понял ему лейбл не обязателен.*/
 
 .search-form {
-  display: none;
+  position: absolute;
+  top: 36px;
+  left: -309px;
 
-position: absolute;
-left: -309px;
-top: 42px;
+  display: none;
+  width: 341px;
+  padding: 20px 15px;
+
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-  padding: 20px 15px;
-  width: 311px;
 }
 
 .search-form input {
+  width: 100%;
+  padding: 9px 13px;
+
   font: inherit;
   font-size: 14px;
   line-height: 24px;
   color: #000000;
-  width: 100%;
-  padding: 9px 13px;
 
   border: 1px solid #b2b2b2;
   border-radius: 5px;
 }
 
 .search-form input:hover {
-  border: 2px solid #9a9a9a;
   padding: 8px 12px;
+
+  border: 2px solid #9a9a9a;
 }
 
 .search-form input:focus {
-  border: 2px solid #2e88e4;
   padding: 8px 12px;
+
+  border: 2px solid #2e88e4;
   outline: none;
 }
 
 .search {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
 }
@@ -274,11 +324,25 @@ top: 42px;
 .login-link {
   display: block;
   width: 92px;
+  padding: 7px 14px 7px 44px;
+}
+
+.login-link svg {
+  position: absolute;
+  top: 5px;
+  left: 16px;
 }
 
 .cart {
   display: block;
   width: 100px;
+  padding: 7px 14px 7px 44px;
+}
+
+.cart svg {
+  position: absolute;
+  top: 5px;
+  left: 16px;
 }
 
 .search,
@@ -309,46 +373,85 @@ top: 42px;
   fill: #000000;
 }
 
+.login-link:hover path,
+.login-link:focus path {
+  fill: #000000;
+}
+
+.cart:hover path,
+.cart:focus path,
+.cart:hover circle,
+.cart:focus circle {
+  fill: #000000;
+}
+
 .main-header .wrapper:hover .login-form {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
 }
 /*Тоже пришлось сделать обертку*/
 
 .login-form {
   position: absolute;
+  top: 35px;
+  left: -185px;
+  z-index: 2;
+
   display: none;
+  width: 277px;
+  padding: 20px 17px 22px 19px;
 
   background-color: #f8f7f4;
   border-radius: 5px;
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
+.login-form p {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
 .login-form input {
+  width: 100%;
+  padding: 9px 14px;
+
   font: inherit;
   font-size: 14px;
   line-height: 24px;
   color: #000000;
 
-  border: 2px solid #b2b2b2;
+  border: 1px solid #b2b2b2;
   border-radius: 5px;
 }
 
 .login-form input:hover {
+  padding: 8px 13px;
+
   border: 2px solid #9a9a9a;
 }
 
 .login-form input:focus {
+  padding: 8px 13px;
+
   border: 2px solid #2e88e4;
   outline: none;
 }
 
+.entry-btn {
+  margin-right: 20px;
+}
+
 .login-form a {
+  display: block;
+
   font-size: 13px;
-  line-height: 24px;
+  line-height: 21px;
   color: #323232;
 
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
+/*не могу здесь понять как сделать ширину подчеркивания не во всю строку. Понимаю, что во всю строку оно сейчас из-за display-block, пытался делать inline-block, но не могу понять как перенести вторую ссылку на другую строку тогда*/
 
 .login-form a:hover,
 .login-form a:focus {
@@ -395,13 +498,17 @@ top: 42px;
 }
 
 .contact-info {
-  display: none;
-  /*пока что скрыл блок с временем работы*/
+  position: absolute;
+  top: 67px;
+  right: 26px;
+  z-index: 1;
+
   margin: 0;
 
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  text-align: right;
 }
 
 .phone {
@@ -530,6 +637,8 @@ top: 42px;
 
 .about-shop {
   margin-bottom: 40px;
+  margin-bottom: 40px;
+  padding: 25px 20px 23px;
 
   color: #323232;
 
@@ -546,11 +655,13 @@ top: 42px;
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+  letter-spacing: 0.2px;
 }
 
 .about-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 
@@ -559,8 +670,33 @@ top: 42px;
 
 .about-item {
   width: 540px;
+  padding-top: 22px;
+  padding-left: 57px;
 }
 
+.about-item:first-child {
+  background-image: url(../img/icon-icecream.svg);
+  background-repeat: no-repeat;
+  background-position: 0 8px;
+}
+
+.about-item:nth-child(2) {
+  background-image: url(../img/icon-cow.svg);
+  background-repeat: no-repeat;
+  background-position: 0 8px;
+}
+
+.about-item:nth-child(3) {
+  background-image: url(../img/icon-leaf.svg);
+  background-repeat: no-repeat;
+  background-position: 0 8px;
+}
+
+.about-item:last-child {
+  background-image: url(../img/icon-thermometer.svg);
+  background-repeat: no-repeat;
+  background-position: 0 8px;
+}
 .about-item p {
   margin: 0;
 }
@@ -577,12 +713,15 @@ top: 42px;
 
 .news-post {
   width: 560px;
+  padding: 24px 20px;
 
   color: #323232;
 
   background-color: #ffffff;
   background-image: url(../img/bg-strawberry.jpg);
   background-repeat: no-repeat;
+  background-position: 17% 40%;
+  background-size: 153%;
   border-radius: 15px;
 }
 
@@ -593,13 +732,17 @@ top: 42px;
 }
 
 .news-post a {
+  display: block;
+  width: 300px;
+  margin-bottom: 60px;
+
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   color: #323232;
   text-decoration: underline;
 }
-
+/*здесь не совсем ясно как опустить подчеркивание чуть ниже. Задавая бордером, подчеркивание появляется в самом низу.*/
 .news-post a:hover,
 .news-post a:focus {
   color: #e84d37;
@@ -619,28 +762,53 @@ top: 42px;
 }
 /*для фона сверху потом сделаю еще один див*/
 
+.mailing .wrapper {
+  margin: 5px;
+
+  background-color: #f8f7f4;
+  border-radius: 15px;
+}
+
 .mailing p {
   margin: 0;
+  margin-bottom: 36px;
+  padding-top: 30px;
+  padding-left: 23px;
 }
 
 .subscribe-form input {
+  width: 368px;
+  margin-right: 8px;
+  margin-bottom: 34px;
+  margin-left: 21px;
+  padding: 9px 14px;
+
   font: inherit;
   line-height: 24px;
   color: #000000;
 
-  border: 2px solid #b2b2b2;
+  border: 1px solid #b2b2b2;
   border-radius: 5px;
 }
 
 .subscribe-form input:hover {
+  padding: 8px 13px;
+
   border: 2px solid #9a9a9a;
 }
 
 .subscribe-form input:focus {
+  padding: 8px 13px;
+
   border: 2px solid #2e88e4;
   outline: none;
 }
 
+.submit-btn {
+  padding: 11px 19px;
+
+  border-radius: 22px;
+}
 /*end of mailing*/
 /*find-us*/
 
@@ -945,8 +1113,11 @@ top: 42px;
 
 .main-footer {
   display: flex;
+  align-items: center;
   padding-top: 18px;
   padding-bottom: 25px;
+
+  -ms-align-items: center;
 }
 
 .main-footer a {
@@ -954,6 +1125,9 @@ top: 42px;
 }
 
 .social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 186px;
   margin: 0;
   margin-right: 239px;
@@ -962,7 +1136,36 @@ top: 42px;
   list-style: none;
 }
 
+.social-item {
+  width: 38px;
+  height: 38px;
+
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.social-item svg {
+  opacity: 0.8;
+}
+
+.social-item:hover,
+.social-item:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+.social-item:hover svg,
+.social-item:focus svg {
+  opacity: 1;
+}
+
+.social-item:active path {
+  fill: #f9f9f9;
+}
+
 .menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 305px;
   margin: 0;
   margin-right: 231px;
@@ -975,22 +1178,40 @@ top: 42px;
 /*пока задал ширину без учета "сердечка", не проверял будет ли оно видно после добавления его*/
 
 .menu-list li:first-child {
+  position: relative;
+
   font-weight: 700;
 }
+.menu-list li:first-child::before {
+  content: "";
+  position: absolute;
+  left: -23px;
 
+  width: 15px;
+  height: 13px;
+
+  background-image: url(../img/icon-heart.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.menu-list li:nth-child(2) {
+  margin-right: 56px;
+}
 .menu-list a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .copyright {
-  width: 190px;
+  width: 191px;
 }
 
 .academy-logo {
+  display: block;
   width: 108px;
   height: 38px;
 }
-
+/*не очень удобно делать футер без блока с картой*/
 .made-in {
   margin: 0;
 
@@ -1015,12 +1236,26 @@ top: 42px;
 /*modal*/
 
 .modal {
+  /*скрыто*/
+  position: fixed;
+  top: 36%;
+  left: 50%;
+
+  display: none;
+
   background-color: #f8f7f4;
   border-radius: 10px;
+  transform: translateX(-50%);
+}
+
+.modal-feedback {
+  width: 477px;
+  padding: 16px 25px 27px 24px;
 }
 
 .modal-feedback h2 {
   margin: 0;
+  margin-bottom: 19px;
 
   font-weight: 500;
   font-size: 24px;
@@ -1030,6 +1265,7 @@ top: 42px;
 
 .modal-feedback p {
   margin: 0;
+  margin-bottom: 20px;
 }
 
 .feedback-form input,
@@ -1037,19 +1273,76 @@ top: 42px;
   font-size: 16px;
   line-height: 24px;
 
-  border: 2px solid #b2b2b2;
+  border: 1px solid #b2b2b2;
   border-radius: 5px;
 }
 
 .feedback-form input:hover,
 .feedback-form textarea:hover {
+  padding: 8px 14px;
+
   border: 2px solid #9a9a9a;
 }
 
 .feedback-form input:focus,
 .feedback-form textarea:focus {
+  padding: 8px 14px;
+
   border: 2px solid #2e88e4;
   outline: none;
 }
 
+.feedback-form input {
+  width: 268px;
+  padding: 9px 15px;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  min-height: 155px;
+  padding: 9px 15px;
+}
+
+.send-btn {
+  display: block;
+  margin-left: auto;
+  padding: 8px 22px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 16px;
+
+  width: 18px;
+  height: 17px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: -3px;
+
+  width: 22px;
+  height: 2px;
+
+  background-color: #000000;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
 /*end of modal*/
