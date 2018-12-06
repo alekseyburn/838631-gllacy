@@ -70,14 +70,16 @@ input[type="radio"].visually-hidden {
 .btn:hover,
 .btn:focus {
   background-color: #f26843;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+  background-image:
+  linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
   linear-gradient(to top, #e74a35, #f26843);
   box-shadow: 0 2px 2px #ac1000;
 }
 
 .btn:active {
   background-color: #bc5e4b;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+  background-image:
+  linear-gradient(to top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
   linear-gradient(to bottom, #e74a35, #f26843);
   box-shadow: inset 0 2px 2px #942718;
 }
@@ -103,20 +105,18 @@ input[type="radio"].visually-hidden {
   width: 154px;
   height: 64px;
   margin-right: 10px;
-  /*padding-top: 10px;*/
 }
 
 .main-navigation {
   flex-grow: 1;
-  width: 380px;
+  /*min-width: 380px;*/
 }
+/*не могу понять, нужно ли здесь ограничивать размернавигации. Вроде как в лекции ограничили, но мне нужно чтобы новые элементы добавлялись до поиска (что сейчас и происходит). Проблема в том, что размеры логотипа при этом не фиксируются и уменьшаются, не могу понять почему.*/
 
-/*Посмотрел и понял, что задал ширину не флекс-элементу, а элементу внутри флекс-элемента. Теперь навигация съедает все свободное пространство и не нужно задавать маргин*/
 .site-navigation {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  /*width: 350px;*/
   margin: 0;
   padding: 0;
 
@@ -133,17 +133,16 @@ input[type="radio"].visually-hidden {
   display: block;
   margin: 0 14px;
   padding: 7px 0;
-
+/*Так и не понял, как сделать ссылки каталога полноразмерными, а не маргинами по бокам.*/
   vertical-align: middle;
   color: #ffffff;
   /*border-bottom: 1px solid rgba(255, 255, 255, 0.2);*/
-
+/*заменил бордер на градиент потому-что из-за падингов бордер съезжает вниз*/
   background-image: linear-gradient(transparent 0, transparent 24px,rgba(255, 255, 255, 0.2) 24px, rgba(255, 255, 255, 0.2) 25px, transparent 25px);
 }
 
 .site-navigation-current > a {
   background-color: #ee725a;
-  border-bottom: none;
   border-radius: 16px;
 }
 
@@ -171,7 +170,8 @@ input[type="radio"].visually-hidden {
   width: 200px;
   height: 5px;
 }
-/*подложка для подменю. Так и не понял, как сделать ссылки каталога полноразмерными, а не маргинами по бокам.*/
+/*подложка для подменю. */
+
 .catalog-menu {
   position: absolute;
   top: 37px;
@@ -215,6 +215,7 @@ input[type="radio"].visually-hidden {
 
   background-color: rgba(0, 0, 0, 0.2);
 }
+/*сделал черту псевдоэлементом, потому что бордер тянется во всю ширину.*/
 
 .catalog-menu a {
   display: block;
@@ -240,6 +241,7 @@ input[type="radio"].visually-hidden {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+
 .catalog-menu-current a {
   color: #ffffff;
 
@@ -266,12 +268,11 @@ input[type="radio"].visually-hidden {
   width: 100px;
   height: 22px;
 }
+/*подложка*/
 
 .main-header .wrapper:hover .search-form {
   display: block;
 }
-/*пришлось делать обертку, чтобы не исчезал поиск после потери фокуса у слова "Поиск"*/
-/*решил всё-таки сделать текст у самой ссылки, а лейбл удалить (посмотрел несколько примеров использования input type=search в интернете, как я понял ему лейбл не обязателен.*/
 
 .search-form {
   position: absolute;
@@ -314,12 +315,19 @@ input[type="radio"].visually-hidden {
 }
 
 .search {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: block;
   width: 32px;
   height: 32px;
 }
+
+.search svg {
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  width: 17px;
+  height: 17px;
+}
+/*заинлайнил в данном случае чтобы не загружать 2 одинаковых картинки разных цветов*/
 
 .login-link {
   display: block;
@@ -331,6 +339,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 5px;
   left: 16px;
+  width: 21px;
+  height: 19px;
 }
 
 .cart {
@@ -343,6 +353,8 @@ input[type="radio"].visually-hidden {
   position: absolute;
   top: 5px;
   left: 16px;
+  width: 21px;
+  height: 20px;
 }
 
 .search,
@@ -389,7 +401,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
 }
-/*Тоже пришлось сделать обертку*/
 
 .login-form {
   position: absolute;
@@ -442,22 +453,26 @@ input[type="radio"].visually-hidden {
   margin-right: 20px;
 }
 
+.links-wrapper {
+  width: 121px;
+}
+
 .login-form a {
-  display: block;
 
   font-size: 13px;
   line-height: 21px;
   color: #323232;
 
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+/*  border-bottom: 1px solid rgba(0, 0, 0, 0.3);*/
+background-image: linear-gradient(transparent 0, transparent 13px,rgba(0, 0, 0, 0.3) 13px, rgba(0, 0, 0, 0.3) 14px, transparent 14px);
 }
-/*не могу здесь понять как сделать ширину подчеркивания не во всю строку. Понимаю, что во всю строку оно сейчас из-за display-block, пытался делать inline-block, но не могу понять как перенести вторую ссылку на другую строку тогда*/
+/*тоже заменил бордер градиентом*/
 
 .login-form a:hover,
 .login-form a:focus {
   color: #e84d37;
-
-  border-bottom-color: rgba(232, 77, 55, 0.3);
+background-image: linear-gradient(transparent 0, transparent 13px,rgba(232, 77, 55, 0.3) 13px, rgba(232, 77, 55, 0.3) 14px, transparent 14px);
+  /*border-bottom-color: rgba(232, 77, 55, 0.3);*/
 }
 
 .not-empty {
@@ -486,6 +501,7 @@ input[type="radio"].visually-hidden {
   color: #999999;
 }
 /*с разделителем здесь пока так же не разобрался*/
+
 .products-cart p {
   font-weight: 700;
   font-size: 15px;
@@ -637,7 +653,6 @@ input[type="radio"].visually-hidden {
 
 .about-shop {
   margin-bottom: 40px;
-  margin-bottom: 40px;
   padding: 25px 20px 23px;
 
   color: #323232;
@@ -673,6 +688,7 @@ input[type="radio"].visually-hidden {
   padding-top: 22px;
   padding-left: 57px;
 }
+/*текст в одной из колонок не совпадает потому что в макете там между словами 2 пробела, я сделал 1.*/
 
 .about-item:first-child {
   background-image: url(../img/icon-icecream.svg);
@@ -697,6 +713,7 @@ input[type="radio"].visually-hidden {
   background-repeat: no-repeat;
   background-position: 0 8px;
 }
+
 .about-item p {
   margin: 0;
 }
@@ -720,7 +737,7 @@ input[type="radio"].visually-hidden {
   background-color: #ffffff;
   background-image: url(../img/bg-strawberry.jpg);
   background-repeat: no-repeat;
-  background-position: 17% 40%;
+  background-position: -47px -220px;
   background-size: 153%;
   border-radius: 15px;
 }
@@ -743,6 +760,7 @@ input[type="radio"].visually-hidden {
   text-decoration: underline;
 }
 /*здесь не совсем ясно как опустить подчеркивание чуть ниже. Задавая бордером, подчеркивание появляется в самом низу.*/
+
 .news-post a:hover,
 .news-post a:focus {
   color: #e84d37;
@@ -771,13 +789,14 @@ input[type="radio"].visually-hidden {
 
 .mailing p {
   margin: 0;
-  margin-bottom: 36px;
+  /*margin-bottom: 36px;*/
   padding-top: 30px;
   padding-left: 23px;
 }
 
 .subscribe-form input {
   width: 368px;
+  margin-top: 36px;
   margin-right: 8px;
   margin-bottom: 34px;
   margin-left: 21px;
@@ -805,10 +824,11 @@ input[type="radio"].visually-hidden {
 }
 
 .submit-btn {
-  padding: 11px 19px;
-
+  padding: 11px 18px 10px;
+vertical-align: baseline;
   border-radius: 22px;
 }
+
 /*end of mailing*/
 /*find-us*/
 
@@ -1114,10 +1134,8 @@ input[type="radio"].visually-hidden {
 .main-footer {
   display: flex;
   align-items: center;
-  padding-top: 18px;
-  padding-bottom: 25px;
-
-  -ms-align-items: center;
+  margin-top: 14px;
+  margin-bottom: 25px;
 }
 
 .main-footer a {
@@ -1130,10 +1148,11 @@ input[type="radio"].visually-hidden {
   justify-content: space-between;
   width: 186px;
   margin: 0;
-  margin-right: 239px;
+  margin-right: 237px;
   padding: 0;
 
   list-style: none;
+  margin-top: 12px;
 }
 
 .social-item {
@@ -1146,6 +1165,8 @@ input[type="radio"].visually-hidden {
 
 .social-item svg {
   opacity: 0.8;
+  width: 32px;
+  height: 32px;
 }
 
 .social-item:hover,
@@ -1166,9 +1187,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 305px;
+  width: 304px;
   margin: 0;
-  margin-right: 231px;
   padding: 0;
 
   list-style: none;
@@ -1177,15 +1197,21 @@ input[type="radio"].visually-hidden {
 }
 /*пока задал ширину без учета "сердечка", не проверял будет ли оно видно после добавления его*/
 
+.menu-list li {
+  margin-top: 7px;
+}
+
 .menu-list li:first-child {
   position: relative;
 
   font-weight: 700;
 }
+
 .menu-list li:first-child::before {
   content: "";
   position: absolute;
   left: -23px;
+  top: 4px;
 
   width: 15px;
   height: 13px;
@@ -1198,20 +1224,22 @@ input[type="radio"].visually-hidden {
 .menu-list li:nth-child(2) {
   margin-right: 56px;
 }
+
 .menu-list a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .copyright {
-  width: 191px;
+  margin-left: auto;
 }
 
-.academy-logo {
-  display: block;
+.academy-logo img {
+  /*display: block;*/
   width: 108px;
   height: 38px;
+  margin-left: 2px;
 }
-/*не очень удобно делать футер без блока с картой*/
+
 .made-in {
   margin: 0;
 
@@ -1268,6 +1296,17 @@ input[type="radio"].visually-hidden {
   margin-bottom: 20px;
 }
 
+.feedback-form input {
+  width: 268px;
+  padding: 9px 15px;
+}
+
+.feedback-form textarea {
+  width: 100%;
+  min-height: 155px;
+  padding: 9px 15px;
+}
+
 .feedback-form input,
 .feedback-form textarea {
   font-size: 16px;
@@ -1292,21 +1331,11 @@ input[type="radio"].visually-hidden {
   outline: none;
 }
 
-.feedback-form input {
-  width: 268px;
-  padding: 9px 15px;
-}
-
-.feedback-form textarea {
-  width: 100%;
-  min-height: 155px;
-  padding: 9px 15px;
-}
-
 .send-btn {
   display: block;
   margin-left: auto;
-  padding: 8px 22px;
+  padding: 10px 22px;
+  border-radius: 21px;
 }
 
 .modal-close {
