@@ -1315,13 +1315,13 @@ img {
 .sort select {
   width: 230px;
   /*fix для всех браузеров - прятал стандартную стрелку*/
-  padding: 7px 11px 8px;
+  padding: 6px 11px 7px;
 
   font-weight: 500;
   color: #ffffff;
 
   background-color: transparent;
-  border: none;
+  /*fix для opera - были рамки сверху и снизу*/
 }
 
 .select-wrapper {
@@ -1356,8 +1356,9 @@ img {
 
 .price-controls {
   position: absolute;
-  top: -1px;
+  bottom: 40px;
   left: 55px;
+  /*fix для mozilla - мин и макс цена неправильно позиционировались относительно верха*/
 
   max-width: 163px;
 
