@@ -1314,12 +1314,12 @@ img {
 
 .sort select {
   width: 230px;
+  min-height: 36px;
   /*fix для всех браузеров - прятал стандартную стрелку*/
   padding: 6px 11px 7px;
-
   font-weight: 500;
   color: #ffffff;
-
+  border: none;
   background-color: transparent;
   /*fix для opera - были рамки сверху и снизу*/
 }
@@ -1327,7 +1327,6 @@ img {
 .select-wrapper {
   width: 193px;
   overflow: hidden;
-
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url("../img/icon-down-dir.svg");
   background-repeat: no-repeat;
@@ -1357,7 +1356,7 @@ img {
 .price-controls {
   position: absolute;
   bottom: 40px;
-  left: 55px;
+  left: 54px;
   /*fix для mozilla - мин и макс цена неправильно позиционировались относительно верха*/
 
   max-width: 163px;
@@ -1367,7 +1366,7 @@ img {
 }
 
 .price-controls input {
-  width: 25px;
+  width: 27px;
 
   font: inherit;
   font-size: 14px;
