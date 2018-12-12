@@ -1,13 +1,13 @@
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 body {
@@ -38,9 +38,7 @@ img {
   background-position: top center;
 
   -webkit-transition: background-image 0.5s ease, background-color 0.5s ease;
-
   -o-transition: background-image 0.5s ease, background-color 0.5s ease;
-
   transition: background-image 0.5s ease, background-color 0.5s ease;
 }
 
@@ -75,8 +73,9 @@ img {
   border: 0;
 
   clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+
   -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
 }
 
 .btn {
@@ -94,12 +93,12 @@ img {
   background-color: #ee725a;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#e74a35), to(#f26843));
   background-image: -webkit-linear-gradient(bottom, #e74a35, #f26843);
-  background-image: -o-linear-gradient(bottom, #e74a35, #f26843);
-  background-image: linear-gradient(to top, #e74a35, #f26843);
+  background-image:      -o-linear-gradient(bottom, #e74a35, #f26843);
+  background-image:         linear-gradient(to top, #e74a35, #f26843);
   border: none;
   border-radius: 17px/22px;
   -webkit-box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-          box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
 }
 
 .btn:hover,
@@ -109,12 +108,12 @@ img {
   -webkit-gradient(linear, left bottom, left top, from(#e74a35), to(#f26843));
   background-image: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
   -webkit-linear-gradient(bottom, #e74a35, #f26843);
-  background-image: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+  background-image:      -o-linear-gradient(bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
   -o-linear-gradient(bottom, #e74a35, #f26843);
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+  background-image:         linear-gradient(to top, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
   linear-gradient(to top, #e74a35, #f26843);
   -webkit-box-shadow: 0 2px 2px #ac1000;
-          box-shadow: 0 2px 2px #ac1000;
+  box-shadow: 0 2px 2px #ac1000;
 }
 
 .btn:active {
@@ -123,12 +122,12 @@ img {
   -webkit-gradient(linear, left top, left bottom, from(#e74a35), to(#f26843));
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
   -webkit-linear-gradient(top, #e74a35, #f26843);
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+  background-image:      -o-linear-gradient(bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
   -o-linear-gradient(top, #e74a35, #f26843);
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
+  background-image:         linear-gradient(to top, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
   linear-gradient(to bottom, #e74a35, #f26843);
   -webkit-box-shadow: inset 0 2px 2px #942718;
-          box-shadow: inset 0 2px 2px #942718;
+  box-shadow: inset 0 2px 2px #942718;
 }
 
 .container {
@@ -143,13 +142,12 @@ img {
   position: relative;
 
   display: -webkit-box;
-
   display: -ms-flexbox;
-
   display: flex;
+  align-items: center;
+
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
 }
 
 .main-header-logo {
@@ -160,29 +158,31 @@ img {
 }
 
 .main-navigation {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   min-width: 380px;
   max-width: 738px;
   margin-top: 5px;
+
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
 }
 
 .site-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
 
   list-style: none;
   font-weight: 700;
   line-height: 18px;
+
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -ms-flex-wrap: wrap;
 }
 
 .site-navigation-item {
@@ -222,7 +222,7 @@ img {
 .site-navigation-item > a:active {
   background-color: rgba(248, 247, 244, 0.988);
   -webkit-box-shadow: inset 0 2px 1px #696969;
-          box-shadow: inset 0 2px 1px #696969;
+  box-shadow: inset 0 2px 1px #696969;
 }
 
 .site-navigation-current > a {
@@ -238,7 +238,7 @@ img {
 
 .site-navigation-current > a:active {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .site-navigation-item::after {
@@ -269,7 +269,7 @@ img {
   background-color: #f7f6f3;
   border-radius: 5px;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .catalog-menu li {
@@ -312,7 +312,7 @@ img {
 .catalog-menu a:active {
   background-color: #f6b5a5;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .catalog-menu .link-new:hover,
@@ -371,17 +371,19 @@ img {
   background-color: #f8f7f4;
   border-radius: 5px;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .search-form input {
   width: 100%;
+  min-height: 44px;
   padding: 9px 13px;
+  /*fix для ie11*/
 
   font: inherit;
   font-size: 14px;
   line-height: 24px;
-  color: #000000;
+  color: #999999;
 
   border: 1px solid #b2b2b2;
   border-radius: 5px;
@@ -395,6 +397,8 @@ img {
 
 .search-form input:focus {
   padding: 8px 12px;
+
+  color: #000000;
 
   border: 2px solid #2e88e4;
   outline: none;
@@ -489,8 +493,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
+
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
 }
 
 .login-form {
@@ -506,7 +511,7 @@ img {
   background-color: #f8f7f4;
   border-radius: 6px;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .login-form p {
@@ -517,12 +522,14 @@ img {
 
 .login-form input {
   width: 100%;
+  min-height: 44px;
+  /*fix для ie11 - некорректно отображались поля ввода. Хотя тут можно задать даже просто height?*/
   padding: 9px 14px;
 
   font: inherit;
   font-size: 14px;
   line-height: 24px;
-  color: #000000;
+  color: #999999;
 
   border: 1px solid #b2b2b2;
   border-radius: 5px;
@@ -536,6 +543,8 @@ img {
 
 .login-form input:focus {
   padding: 8px 13px;
+
+  color: #000000;
 
   border: 2px solid #2e88e4;
   outline: none;
@@ -556,10 +565,8 @@ img {
   color: #323232;
 
   background-image: -webkit-linear-gradient(transparent 0, transparent 13px,rgba(0, 0, 0, 0.3) 13px, rgba(0, 0, 0, 0.3) 14px, transparent 14px);
-
-  background-image: -o-linear-gradient(transparent 0, transparent 13px,rgba(0, 0, 0, 0.3) 13px, rgba(0, 0, 0, 0.3) 14px, transparent 14px);
-
-  background-image: linear-gradient(transparent 0, transparent 13px,rgba(0, 0, 0, 0.3) 13px, rgba(0, 0, 0, 0.3) 14px, transparent 14px);
+  background-image:      -o-linear-gradient(transparent 0, transparent 13px,rgba(0, 0, 0, 0.3) 13px, rgba(0, 0, 0, 0.3) 14px, transparent 14px);
+  background-image:         linear-gradient(transparent 0, transparent 13px,rgba(0, 0, 0, 0.3) 13px, rgba(0, 0, 0, 0.3) 14px, transparent 14px);
 }
 
 .login-form a:hover,
@@ -567,10 +574,8 @@ img {
   color: #e84d37;
 
   background-image: -webkit-linear-gradient(transparent 0, transparent 13px,rgba(232, 77, 55, 0.3) 13px, rgba(232, 77, 55, 0.3) 14px, transparent 14px);
-
-  background-image: -o-linear-gradient(transparent 0, transparent 13px,rgba(232, 77, 55, 0.3) 13px, rgba(232, 77, 55, 0.3) 14px, transparent 14px);
-
-  background-image: linear-gradient(transparent 0, transparent 13px,rgba(232, 77, 55, 0.3) 13px, rgba(232, 77, 55, 0.3) 14px, transparent 14px);
+  background-image:      -o-linear-gradient(transparent 0, transparent 13px,rgba(232, 77, 55, 0.3) 13px, rgba(232, 77, 55, 0.3) 14px, transparent 14px);
+  background-image:         linear-gradient(transparent 0, transparent 13px,rgba(232, 77, 55, 0.3) 13px, rgba(232, 77, 55, 0.3) 14px, transparent 14px);
 }
 
 .not-empty {
@@ -600,7 +605,7 @@ img {
   background-color: #f8f7f4;
   border-radius: 5px;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .products-cart-list {
@@ -668,14 +673,14 @@ img {
 
 .close-btn::before {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .close-btn::after {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .products-cart img {
@@ -745,7 +750,7 @@ img {
 .offers-slider {
   position: relative;
 
-  margin-bottom: 51px;
+  margin-bottom: 41px;
   padding-top: 319px;
 
   text-align: center;
@@ -765,7 +770,7 @@ img {
 .offers-item h2 {
   width: 700px;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   font-weight: 700;
   font-size: 60px;
@@ -773,17 +778,20 @@ img {
 }
 
 .offers-btn {
-  padding: 13px 40px;
+  display: inline-block;
+  padding: 10px 40px;
+  /*фикс кнопки для ie11*/
 
   font-size: 32px;
   line-height: 44px;
+  vertical-align: middle;
 
   border-radius: 36px;
 }
 
 .slider-controls {
   position: absolute;
-  bottom: 10px;
+  bottom: 20px;
   left: 1px;
   z-index: 3;
 
@@ -846,13 +854,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
 }
 
 .banners-item {
@@ -930,15 +939,16 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
 }
 
 .about-item {
@@ -979,12 +989,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-bottom: 40px;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
 }
 
 /*news-post*/
@@ -1057,10 +1068,8 @@ img {
   color: #5a5a5a;
 
   background-image: -webkit-repeating-linear-gradient(315deg, #f8f7f4 0, #f8f7f4 8px, #92cdff 8px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 24px, #fe9e90 24px, #fe9e90 32px);
-
-  background-image: -o-repeating-linear-gradient(315deg, #f8f7f4 0, #f8f7f4 8px, #92cdff 8px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 24px, #fe9e90 24px, #fe9e90 32px);
-
-  background-image: repeating-linear-gradient(135deg, #f8f7f4 0, #f8f7f4 8px, #92cdff 8px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 24px, #fe9e90 24px, #fe9e90 32px);
+  background-image:      -o-repeating-linear-gradient(315deg, #f8f7f4 0, #f8f7f4 8px, #92cdff 8px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 24px, #fe9e90 24px, #fe9e90 32px);
+  background-image:         repeating-linear-gradient(135deg, #f8f7f4 0, #f8f7f4 8px, #92cdff 8px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 24px, #fe9e90 24px, #fe9e90 32px);
   /*background-color: #f8f7f4;*/
   border-radius: 15px;
 }
@@ -1073,15 +1082,17 @@ img {
 
 .subscribe-form input {
   width: 368px;
+  min-height: 44px;
   margin-top: 36px;
   margin-right: 8px;
   margin-bottom: 34px;
   margin-left: 26px;
   padding: 9px 14px;
+  /*fix для ie11*/
 
   font: inherit;
   line-height: 24px;
-  color: #000000;
+  color: #999999;
 
   border: 1px solid #b2b2b2;
   border-radius: 5px;
@@ -1095,6 +1106,8 @@ img {
 
 .subscribe-form input:focus {
   padding: 8px 13px;
+
+  color: #000000;
 
   border: 2px solid #2e88e4;
   outline: none;
@@ -1148,7 +1161,7 @@ img {
 }
 
 .feedback-contacts p:nth-child(5) {
-  margin-bottom: 34px;
+  margin-bottom: 23px;
 }
 
 .feedback-contacts b {
@@ -1166,7 +1179,11 @@ img {
 }
 
 .feedback-btn {
+  display: inline-block;
   padding: 11px 28px;
+  /*fix для ie11 - выпадал цвет кнопки*/
+
+  vertical-align: middle;
 
   border-radius: 22px;
 }
@@ -1192,11 +1209,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   margin: 0;
   margin-bottom: 4px;
   padding: 0;
@@ -1204,6 +1218,10 @@ img {
   list-style: none;
   font-size: 14px;
   line-height: 16px;
+
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -ms-flex-wrap: wrap;
 }
 
 .breadcrumbs li {
@@ -1247,18 +1265,19 @@ img {
 /*filters*/
 
 .filters {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 }
 
 .filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  -ms-flex-wrap: wrap;
 }
 
 .filters fieldset {
@@ -1294,7 +1313,8 @@ img {
 }
 
 .sort select {
-  width: 205px;
+  width: 230px;
+  /*fix для всех браузеров - прятал стандартную стрелку*/
   padding: 7px 11px 8px;
 
   font-weight: 500;
@@ -1324,14 +1344,6 @@ img {
 .select-wrapper:focus {
   background-image: url("../img/icon-down-dir-hover.png");
   background-position: 169px center;
-}
-/*тут есть проблема - иконка в селекте заменена. Чтобы это сделать, я создал обложку селекту и дал ей ширину меньше селекта, чтобы скрыть стандартную стрелку. В лекции сказали, что данные вещи лучше не стилизовать. По итогу у меня выпадающее меню шире, чем сам селект. Оставить так или сделать снова стандартную стрелку?*/
-
-.sort option:hover,
-.sort option:focus {
-  color: #ffffff;
-
-  background-color: #1e90ff;
 }
 
 .filter-range {
@@ -1398,17 +1410,16 @@ img {
   left: 0;
 
   -webkit-box-sizing: content-box;
-
-          box-sizing: content-box;
+  box-sizing: content-box;
   width: 4px;
   height: 4px;
   padding: 0;
 
-  background-color: #000000;
+  background-color: #999999;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
-          box-shadow: 0 2px 1px 0 #cfcfcf;
+  -webkit-box-shadow: 0 1px 1px 0 #cfcfcf;
+  box-shadow: 0 1px 1px 0 #cfcfcf;
   cursor: pointer;
 }
 
@@ -1431,21 +1442,25 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding: 9px 17px 0 12px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 1131px;
+  padding: 7px 17px 0 12px;
+  /*fix для ie11 при переполнении*/
 
   list-style: none;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
+
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -ms-flex-wrap: wrap;
 }
 
 .filter-option {
-  margin-bottom: 9px;
+  margin-bottom: 7px;
+  padding: 2px;
   padding-right: 14px;
   padding-left: 35px;
 }
@@ -1467,23 +1482,19 @@ img {
   cursor: pointer;
 
   -webkit-user-select: none;
-
-     -moz-user-select: none;
-
-      -ms-user-select: none;
-
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .filter-input-radio + label::before {
   content: "";
   position: absolute;
   top: -2px;
-  left: -32px;
+  left: -33px;
 
   -webkit-box-sizing: content-box;
-
-          box-sizing: content-box;
+  box-sizing: content-box;
   width: 14px;
   height: 14px;
 
@@ -1496,7 +1507,7 @@ img {
   content: "";
   position: absolute;
   top: 5px;
-  left: -25px;
+  left: -26px;
 
   width: 8px;
   height: 8px;
@@ -1522,14 +1533,16 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  padding: 9px 20px 0 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 1141px;
+  padding: 7px 20px 0 16px;
 
   list-style: none;
+
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -ms-flex-wrap: wrap;
 }
 
 .filter-input-checkbox + label::before {
@@ -1539,8 +1552,7 @@ img {
   left: -31px;
 
   -webkit-box-sizing: content-box;
-
-          box-sizing: content-box;
+  box-sizing: content-box;
   width: 16px;
   height: 16px;
 
@@ -1581,8 +1593,7 @@ img {
 }
 
 .filter-btn {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
   margin-bottom: 16px;
   padding: 7px 27px;
 
@@ -1595,6 +1606,8 @@ img {
   background-color: #9cb0a4;
   border: 2px solid #ffffff;
   border-radius: 18px;
+
+  -ms-flex-item-align: end;
 }
 
 .filter-btn:hover,
@@ -1610,7 +1623,7 @@ img {
   background-color: #eaeaea;
   border: none;
   -webkit-box-shadow: inset 0 2px 1px #696969;
-          box-shadow: inset 0 2px 1px #696969;
+  box-shadow: inset 0 2px 1px #696969;
 }
 
 /*catalog-list*/
@@ -1618,13 +1631,13 @@ img {
 .inner-page .catalog {
   position: relative;
 
-  margin-bottom: 47px;
+  margin-bottom: 45px;
 }
 
 .inner-page .catalog::after {
   content: "";
   position: absolute;
-  bottom: -30px;
+  bottom: -31px;
 
   width: 1146px;
   height: 1px;
@@ -1636,12 +1649,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  -ms-flex-wrap: wrap;
 }
 
 .inner-page .catalog-list {
@@ -1751,7 +1765,7 @@ img {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
 }
 
 .catalog-item:hover::after {
@@ -1779,13 +1793,14 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 
   list-style: none;
+
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -ms-flex-wrap: wrap;
 }
 
 .pagination-item {
@@ -1866,11 +1881,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 11px;
+  align-items: center;
+  margin-top: 8px;
   padding-bottom: 23px;
+
+  -webkit-box-align: center;
+  -ms-flex-align: center;
 }
 
 .main-footer a {
@@ -1881,32 +1897,27 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 186px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 185px;
   margin: 0;
-  margin-top: 12px;
-  margin-right: 237px;
+  margin-top: 24px;
+  margin-right: 238px;
   padding: 0;
 
   list-style: none;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
 }
 
-.social-item {
+.social-item svg {
   width: 38px;
   height: 38px;
 
   border: 3px solid rgba(255, 255, 255, 0.5);
   border-radius: 50%;
-}
-
-.social-item svg {
-  width: 32px;
-  height: 32px;
-
   opacity: 0.8;
 }
 
@@ -1928,11 +1939,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   width: 304px;
   margin: 0;
   margin-top: 5px;
@@ -1941,6 +1949,10 @@ img {
   list-style: none;
   font-size: 13px;
   line-height: 18px;
+
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
 }
 
 .menu-list li {
@@ -2019,8 +2031,8 @@ img {
   background-color: #f8f7f4;
   border-radius: 10px;
   -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .modal-feedback {
@@ -2045,6 +2057,7 @@ img {
 
 .feedback-form input {
   width: 268px;
+  min-height: 44px;
   padding: 9px 15px;
 }
 
@@ -2119,14 +2132,14 @@ img {
 
 .modal-close::before {
   -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .modal-close::after {
   -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .overlay {
