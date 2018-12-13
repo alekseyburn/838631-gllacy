@@ -57,7 +57,7 @@ img {
   background-image: url("../img/bg-slider-fondant-strawberry.png");
 }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden:not(:focus)/*:not(:active)*/,
 .filter-input-radio.visually-hidden,
 .filter-input-checkbox.visually-hidden {
   position: absolute;
@@ -1314,19 +1314,23 @@ img {
 
 .sort select {
   width: 230px;
-  min-height: 36px;
+  height: 36px;
   /*fix для всех браузеров - прятал стандартную стрелку*/
-  padding: 6px 11px 7px;
+  padding: 7px 11px 7px;
+
   font-weight: 500;
   color: #ffffff;
-  border: none;
+
   background-color: transparent;
+  border: none;
+  border-radius: 1px;
   /*fix для opera - были рамки сверху и снизу*/
 }
 
 .select-wrapper {
   width: 193px;
   overflow: hidden;
+
   background-color: rgba(255, 255, 255, 0.2);
   background-image: url("../img/icon-down-dir.svg");
   background-repeat: no-repeat;
