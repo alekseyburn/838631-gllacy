@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
 
   font-weight: 400;
   font-size: 16px;
@@ -589,7 +589,7 @@ img {
   fill: #e84d37;
 }
 
-.products-cart {
+.cart-form {
   position: absolute;
   top: 36px;
   left: -422px;
@@ -618,7 +618,7 @@ img {
   content: "";
   position: absolute;
   right: 15px;
-  bottom: 111px;
+  bottom: 110px;
   left: 14px;
 
   height: 1px;
@@ -683,18 +683,18 @@ img {
   transform: rotate(-45deg);
 }
 
-.products-cart img {
+.products-cart-list img {
   width: 33px;
   height: 33px;
 
   border-radius: 50%;
 }
 
-.products-cart span {
+.products-cart-list span {
   color: #999999;
 }
 
-.products-cart p {
+.cart-form p {
   margin: 0;
   margin-top: 30px;
   margin-right: 14px;
@@ -717,7 +717,7 @@ img {
   border-radius: 18px/22px;
 }
 
-.main-header .wrapper:hover .products-cart {
+.main-header .wrapper:hover .cart-form {
   display: block;
 }
 
@@ -1316,7 +1316,7 @@ img {
   width: 230px;
   height: 36px;
   /*fix для всех браузеров - прятал стандартную стрелку*/
-  padding: 7px 11px 7px;
+  padding: 7px 11px 7px 0;
 
   font-weight: 500;
   color: #ffffff;
@@ -1329,6 +1329,7 @@ img {
 
 .select-wrapper {
   width: 193px;
+  padding-left: 11px;
   overflow: hidden;
 
   background-color: rgba(255, 255, 255, 0.2);
