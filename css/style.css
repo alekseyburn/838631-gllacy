@@ -1136,6 +1136,16 @@ img {
   position: relative;
 }
 
+.find-us iframe {
+  border: none;
+  position: absolute;
+  z-index: 2;
+}
+
+.find-us img {
+  z-index: 1;
+}
+
 .feedback-contacts {
   position: absolute;
   top: 62px;
@@ -1149,6 +1159,7 @@ img {
 
   background-color: #fdfefe;
   border-radius: 15px;
+  z-index: 3;
 }
 
 .feedback-contacts p {
@@ -2027,12 +2038,13 @@ img {
 
 /*modal*/
 
-.modal {
-  /*скрыто*/
+.modal-feedback {
   position: fixed;
   top: 36%;
   left: 50%;
   z-index: 4;
+  width: 480px;
+  padding: 16px 25px 26px 26px;
 
   display: none;
 
@@ -2041,11 +2053,6 @@ img {
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
-}
-
-.modal-feedback {
-  width: 480px;
-  padding: 16px 25px 26px 26px;
 }
 
 .modal-feedback h2 {
@@ -2161,4 +2168,8 @@ img {
   height: 100%;
 
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-show {
+  display: block;
 }
