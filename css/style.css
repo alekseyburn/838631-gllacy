@@ -32,6 +32,7 @@ img {
 }
 
 .site-wrapper {
+  width: 1200px;
   margin: 0 auto;
   background-color: #849d8f;
   background-image: url("../img/bg-slider-creamy-raspberry.png");
