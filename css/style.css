@@ -354,7 +354,7 @@ img {
   height: 10px;
 }
 
-.main-header .wrapper:hover .search-form {
+.search-wrapper:hover .search-form {
   display: block;
 }
 
@@ -489,7 +489,7 @@ img {
   fill: #000000;
 }
 
-.main-header .wrapper:hover .login-form {
+.login-wrapper:hover .login-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -717,7 +717,7 @@ img {
   border-radius: 18px/22px;
 }
 
-.main-header .wrapper:hover .products-cart {
+.cart-wrapper:hover .products-cart {
   display: block;
 }
 
@@ -874,11 +874,13 @@ img {
 }
 
 .banners-list li:first-child {
+  background-color: #a2011c;
   background-image: url("../img/bg-raspberry.jpg");
   background-repeat: no-repeat;
 }
 
 .banners-list li:last-child {
+  background-color: #7d5007;
   background-image: url("../img/bg-chocolate.jpg");
   background-repeat: no-repeat;
 }
@@ -907,6 +909,7 @@ img {
   bottom: 24px;
 
   display: inline-block;
+  vertical-align: middle;
   padding: 11px 22px 11px 21px;
 }
 /*Есть ли еще способы расположить кнопку справа, кроме display-flex?*/
@@ -2158,3 +2161,6 @@ img {
 
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+
+/* d1-d12,d25,d26,d21,d22,d24 */
