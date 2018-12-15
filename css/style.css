@@ -58,7 +58,7 @@ img {
   background-image: url("../img/bg-slider-fondant-strawberry.png");
 }
 
-.visually-hidden:not(:focus)/*:not(:active)*/,
+.visually-hidden:not(:focus),
 .filter-input-radio.visually-hidden,
 .filter-input-checkbox.visually-hidden {
   position: absolute;
@@ -74,9 +74,8 @@ img {
   border: 0;
 
   clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-
   -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
 }
 
 .btn {
@@ -146,10 +145,6 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /*align-items: center;*/
-
-  -webkit-box-align: center;
-  -ms-flex-align: center;
 }
 
 .main-header-logo {
@@ -160,18 +155,20 @@ img {
 }
 
 .main-navigation {
-  flex-grow: 1;
-  min-width: 380px;
-  max-width: 700px;
-  margin-top: 23px;
-
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
+  flex-grow: 1;
+  min-width: 380px;
+  max-width: 738px;
+  margin-top: 23px;
 }
 
 .site-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -ms-flex-wrap: wrap;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -181,10 +178,6 @@ img {
   list-style: none;
   font-weight: 700;
   line-height: 18px;
-
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -ms-flex-wrap: wrap;
 }
 
 .site-navigation-item {
@@ -343,9 +336,6 @@ img {
   margin-right: 10px;
 }
 
-.main-header .search-wrapper {
-  margin-left: auto;
-}
 .main-header .wrapper:last-of-type {
   margin-right: 0;
 }
@@ -383,7 +373,6 @@ img {
   width: 100%;
   min-height: 44px;
   padding: 9px 13px;
-  /*fix для ie11*/
 
   font: inherit;
   font-size: 14px;
@@ -498,9 +487,8 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-
   -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .login-form {
@@ -528,7 +516,6 @@ img {
 .login-form input {
   width: 100%;
   min-height: 44px;
-  /*fix для ie11 - некорректно отображались поля ввода. Хотя тут можно задать даже просто height?*/
   padding: 9px 14px;
 
   font: inherit;
@@ -775,7 +762,6 @@ img {
 }
 
 .offers-item h2 {
-  /*margin: 0 auto;*/
   margin-bottom: 30px;
 
   font-weight: 700;
@@ -786,7 +772,6 @@ img {
 .offers-btn {
   display: inline-block;
   padding: 10px 40px;
-  /*фикс кнопки для ie11*/
 
   font-size: 32px;
   line-height: 44px;
@@ -860,14 +845,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   margin: 0;
   padding: 0;
 
   list-style: none;
-
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
 }
 
 .banners-item {
@@ -919,7 +903,6 @@ img {
 
   vertical-align: middle;
 }
-/*Есть ли еще способы расположить кнопку справа, кроме display-flex?*/
 
 /*about-shop*/
 
@@ -949,16 +932,15 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   padding: 0;
 
   list-style: none;
-
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -ms-flex-wrap: wrap;
 }
 
 .about-item {
@@ -999,13 +981,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 30px;
-
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 30px;
 }
 
 /*news-post*/
@@ -1036,7 +1017,6 @@ img {
   width: 300px;
   margin-bottom: 58px;
 }
-/*пришлось сделать оболочку т.к. ширина ссылке не применялась*/
 
 .news-post a {
   font-weight: 700;
@@ -1068,7 +1048,6 @@ img {
   background-color: #f8f7f4;
   border-radius: 15px;
 }
-/*не будет ли вопросов по z-index:-1 ?*/
 
 .mailing {
   position: relative;
@@ -1082,7 +1061,6 @@ img {
   background-image: -webkit-repeating-linear-gradient(315deg, #f8f7f4 0, #f8f7f4 8px, #92cdff 8px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 24px, #fe9e90 24px, #fe9e90 32px);
   background-image:      -o-repeating-linear-gradient(315deg, #f8f7f4 0, #f8f7f4 8px, #92cdff 8px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 24px, #fe9e90 24px, #fe9e90 32px);
   background-image:         repeating-linear-gradient(135deg, #f8f7f4 0, #f8f7f4 8px, #92cdff 8px, #92cdff 16px, #f8f7f4 16px, #f8f7f4 24px, #fe9e90 24px, #fe9e90 32px);
-  /*background-color: #f8f7f4;*/
   border-radius: 15px;
 }
 
@@ -1100,7 +1078,6 @@ img {
   margin-bottom: 34px;
   margin-left: 26px;
   padding: 9px 14px;
-  /*fix для ie11*/
 
   font: inherit;
   line-height: 24px;
@@ -1207,7 +1184,6 @@ img {
 .feedback-btn {
   display: inline-block;
   padding: 11px 28px;
-  /*fix для ie11 - выпадал цвет кнопки*/
 
   vertical-align: middle;
 
@@ -1235,6 +1211,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0;
@@ -1244,10 +1223,6 @@ img {
   list-style: none;
   font-size: 14px;
   line-height: 16px;
-
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -ms-flex-wrap: wrap;
 }
 
 .breadcrumbs li {
@@ -1298,12 +1273,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .filters fieldset {
@@ -1341,7 +1315,6 @@ img {
 .sort select {
   width: 230px;
   height: 36px;
-  /*fix для всех браузеров - прятал стандартную стрелку*/
   padding: 7px 11px 7px 0;
 
   font-weight: 500;
@@ -1350,7 +1323,6 @@ img {
   background-color: transparent;
   border: none;
   border-radius: 1px;
-  /*fix для opera - были рамки сверху и снизу*/
 }
 
 .select-wrapper {
@@ -1388,7 +1360,6 @@ img {
   position: absolute;
   bottom: 40px;
   left: 54px;
-  /*fix для mozilla - мин и макс цена неправильно позиционировались относительно верха*/
 
   max-width: 163px;
 
@@ -1473,20 +1444,18 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: flex-start;
   max-width: 1131px;
   padding: 7px 17px 0 12px;
-  /*fix для ie11 при переполнении*/
 
   list-style: none;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 18px;
-
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -ms-flex-wrap: wrap;
 }
 
 .filter-option {
@@ -1570,10 +1539,6 @@ img {
   padding: 7px 20px 0 16px;
 
   list-style: none;
-
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  -ms-flex-wrap: wrap;
 }
 
 .filter-input-checkbox + label::before {
@@ -1624,6 +1589,7 @@ img {
 }
 
 .filter-btn {
+  -ms-flex-item-align: end;
   align-self: flex-end;
   margin-bottom: 16px;
   padding: 7px 27px;
@@ -1637,8 +1603,6 @@ img {
   background-color: #9cb0a4;
   border: 2px solid #ffffff;
   border-radius: 18px;
-
-  -ms-flex-item-align: end;
 }
 
 .filter-btn:hover,
@@ -1680,13 +1644,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
 
   list-style: none;
-
-  -ms-flex-wrap: wrap;
 }
 
 .inner-page .catalog-list {
@@ -1823,14 +1786,13 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: flex-end;
 
   list-style: none;
-
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  -ms-flex-wrap: wrap;
 }
 
 .pagination-item {
@@ -1911,12 +1873,11 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin-top: 8px;
   padding-bottom: 23px;
-
-  -webkit-box-align: center;
-  -ms-flex-align: center;
 }
 
 .main-footer a {
@@ -1927,6 +1888,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 185px;
@@ -1936,10 +1900,6 @@ img {
   padding: 0;
 
   list-style: none;
-
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -ms-flex-wrap: wrap;
 }
 
 .social-item svg {
@@ -1969,6 +1929,9 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 304px;
@@ -1979,10 +1942,6 @@ img {
   list-style: none;
   font-size: 13px;
   line-height: 18px;
-
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  -ms-flex-wrap: wrap;
 }
 
 .menu-list li {
@@ -2183,7 +2142,6 @@ img {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* d1-d12,d25,d26,d21,d22,d24 */
 .modal-show {
   display: block;
 
@@ -2343,13 +2301,3 @@ img {
     transform: translateX(-50%) scale3d(1, 1, 1);
   }
 }
-
-
-/*Вопросы\пояснения
-Критерий Д4 - у меня нету лейбла у поиска, в место него ссылка с названием "поиск". Это пройдет по критерию?
-Критерий Д13 - не стал пока делать, потому что скорее всего придется что-либо изменить.
-Критерий Д15 - то же самое.
-Критерий Д19 - вроде проходит все кроме кнопок в каталог итеме( там position absolute и она перемещается.Пробовал делать не абсолютом, но тогда она опускает блоки ниже.), и кнопки формы обратной связи, там блок по сути имеет фиксированную ширину(как и карта). Еще проверил блоки по ссылке дополнительно https://up.htmlacademy.ru/htmlcss/23/examples_overflow#gllacy
-Критерий Д27 - не задавал описания кнопкам переключения слайдов т.к. они не попадают в фокус.
-Критерий Д23 - не минифицировал пока не поправил css полностью.
-*/

@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 <body class="inner-page">
   <header class="main-header container">
@@ -121,11 +121,11 @@
             <label class="max-price"><span class="visually-hidden">до </span><input type="text" name="max-price" value="500">руб.</label>
           </div>
           <div class="range-controls">
-            <div class="scale"> <!-- полоска во всю ширину -->
-              <div class="bar"></div> <!-- полоска длиной в n-процентов -->
+            <div class="scale">
+              <div class="bar"></div>
             </div>
-            <div class="range-toggle range-toggle-min"></div> <!-- левый ползунок -->
-            <div class="range-toggle range-toggle-max"></div> <!-- правый ползунок -->
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
           </div>
         </fieldset>
         <fieldset class="fat-percent">
@@ -303,9 +303,5 @@
       <p class="made-in">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
     </div>
   </footer>
-  <script>document.write('<script src="http://'
-    + (location.host || 'localhost').split(':')[0]
-    + ':35729/livereload.js?snipver=1"></'
-    + 'script>')</script>
   </body>
   </html>
